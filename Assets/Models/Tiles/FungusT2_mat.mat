@@ -27,6 +27,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 6790832d35e22f0488cab8c36e46ee4a,
     type: 3}
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords:
   - _MASKMAP
@@ -35,9 +36,10 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: 2475
   stringTagMap:
     MotionVector: User
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -163,7 +165,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
     - _AlphaCutoff: 0.5
-    - _AlphaCutoffEnable: 0
+    - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0.5
@@ -177,10 +179,10 @@ Material:
     - _Bulge_Width: 2.33
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
-    - _Contract: -0.1
+    - _Contract: -1.92
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Cut_Off: 0.5
+    - _Cut_Off: 1
     - _Cutoff: 0.5
     - _Death: 0
     - _DepthOffsetEnable: 0
@@ -205,7 +207,7 @@ Material:
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
     - _Grayscale: 1
-    - _Grow: 0.5
+    - _Grow: 0
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -219,7 +221,7 @@ Material:
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
-    - _Life: 0
+    - _Life: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
@@ -278,11 +280,11 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 3
-    - _ZTestGBuffer: 4
+    - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
     - _ZWrite: 1
-    - _sssssssss: 0
-    - _sssssssssss: 0
+    - _sssssssss: -0.03
+    - _sssssssssss: -0.03
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

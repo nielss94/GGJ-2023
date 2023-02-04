@@ -9,7 +9,9 @@ public enum TileType
     Rock,
     Mushroom,
     Fungus,
-    Tree
+    Tree,
+    Root,
+    FoodSource
 }
 
 public class Tile : MonoBehaviour
@@ -21,6 +23,8 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material mushroomMaterial;
     [SerializeField] private Material fungusMaterial;
     [SerializeField] private Material treeMaterial;
+    [SerializeField] private Material rootMaterial;
+    [SerializeField] private Material foodSourceMaterial;
     
     [Header("Tile")]
     [SerializeField] private TileHolder tileHolder;
@@ -63,6 +67,12 @@ public class Tile : MonoBehaviour
                 break;
             case TileType.Tree:
                 designTile.GetComponent<MeshRenderer>().material = treeMaterial;
+                break;
+            case TileType.Root:
+                designTile.GetComponent<MeshRenderer>().material = rootMaterial;
+                break;
+            case TileType.FoodSource:
+                designTile.GetComponent<MeshRenderer>().material = foodSourceMaterial;
                 break;
         }
     }

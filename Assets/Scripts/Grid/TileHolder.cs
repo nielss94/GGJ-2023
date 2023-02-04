@@ -10,6 +10,8 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile mushroomTilePrefab;
     [SerializeField] private WorldTile fungusTilePrefab;
     [SerializeField] private WorldTile treeTilePrefab;
+    [SerializeField] private WorldTile rootTilePrefab;
+    [SerializeField] private WorldTile foodSourceTilePrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -62,6 +64,16 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Tree:
                 currentTile = Instantiate(treeTilePrefab, transform);
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
+                break;
+            case TileType.Root:
+                currentTile = Instantiate(rootTilePrefab, transform);
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
+                break;
+            case TileType.FoodSource:
+                currentTile = Instantiate(foodSourceTilePrefab, transform);
                 // currentTile.rootTile = tile;
                 currentTile.SetRootTile(tile);
                 break;

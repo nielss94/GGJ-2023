@@ -56,7 +56,7 @@ MonoBehaviour:
   sporePrefab: {fileID: 4187885427437816566, guid: 184a965f973b4aa4aa0ea0d2d1f781c6,
     type: 3}
   spawnCooldown: 3
-  spawnRadius: 1
+  spawnRadius: 0.8
   maxSporeSpawn: 4
 --- !u!1 &3934465012675300373
 GameObject:

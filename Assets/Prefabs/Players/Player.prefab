@@ -663,9 +663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 8291126582298181817}
-  moveSpeed: 2.25
-  boostModifier: 1.5
-  slowModifier: 0.5
+  moveSpeed: 2.15
+  boostModifier: 1.4
+  slowModifier: 0.6
   AllowedToMove: 0
 --- !u!54 &1742109681949637664
 Rigidbody:

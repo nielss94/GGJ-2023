@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 5
   height: 5
-  oddOffset: 0
+  oddOffset: 0.5
   mapScale: 1
   tilePrefab: {fileID: 8449820212396450140, guid: 936010bd64eebd54ab237f407fbd2a82,
     type: 3}

@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
    private PlayerSpawner playerSpawner;
    
    private Vector2 moveDirection = Vector2.zero;
-   private bool allowedToMove = false;
+   
+   public bool AllowedToMove = false;
 
    private void Awake()
    {
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
       rigidbody = GetComponent<Rigidbody>();
       virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
       moveAction = playerInput.actions["move"];
+      
+      playerInput = GetComponent<PlayerInput>();
    }
 
    void Start()
@@ -42,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
          return;
       }
       
-      moveDirection = moveAction.ReadValue<Vector2>();
+      moveDirection = !AllowedToMove ? Vector2.zero : moveAction.ReadValue<Vector2>();
    }
 
    private void FixedUpdate()

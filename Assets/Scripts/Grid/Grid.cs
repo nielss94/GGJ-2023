@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Grid : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Grid : MonoBehaviour
     [SerializeField] private int height;
     [SerializeField] private float xOffset;
     [SerializeField] private float yOffset;
+    [SerializeField] private float minHeightOffset;
+    [SerializeField] private float maxHeightOffset;
+    
     
     private Tile[][] map;
     [SerializeField] private Tile tilePrefab;
@@ -30,6 +34,7 @@ public class Grid : MonoBehaviour
                 {
                     pos.z -= yOffset / 2;
                 }
+                pos.y += Random.Range(minHeightOffset, maxHeightOffset);
                 var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
                 newTile.name = $"Tile {x} {y}";
                 map[x][y] = newTile;

@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f728f316eae67429c8a7372c4cddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sporePrefab: {fileID: 4187885427437816566, guid: 184a965f973b4aa4aa0ea0d2d1f781c6,
+  sporePrefab: {fileID: 4574826828581308034, guid: a35145ae646abd1408fbbd0a2dacd827,
     type: 3}
   spawnCooldown: 3
   spawnRadius: 1
+  maxSporeSpawn: 4

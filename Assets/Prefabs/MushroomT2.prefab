@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f728f316eae67429c8a7372c4cddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sporePrefab: {fileID: 4187885427437816566, guid: 184a965f973b4aa4aa0ea0d2d1f781c6,
+  sporePrefab: {fileID: 4574826828581308034, guid: a35145ae646abd1408fbbd0a2dacd827,
     type: 3}
   spawnCooldown: 3
   spawnRadius: 0.8
@@ -286,6 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592117526641337046}
   - component: {fileID: 1155562142628102613}
+  - component: {fileID: 2933019062261330897}
   m_Layer: 0
   m_Name: SporeContainer
   m_TagString: Untagged
@@ -320,6 +321,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d6b8668e234884ac0c9a8a4202e28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2933019062261330897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934465012675300373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143dddbdb019f334997fdef2d8565aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: {x: 0, y: 1, z: 0}
+  speed: 45
 --- !u!1001 &1951022101683650236
 PrefabInstance:
   m_ObjectHideFlags: 0

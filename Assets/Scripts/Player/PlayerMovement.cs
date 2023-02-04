@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] private float slowModifier = 0.5f;
    
    private PlayerInput playerInput;
-   private Rigidbody rigidbody;
+   private Rigidbody rb;
    private CinemachineVirtualCamera virtualCamera;
    private InputAction moveAction;
    private PlayerSpawner playerSpawner;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
    {
       playerSpawner = FindObjectOfType<PlayerSpawner>();
       playerInput = GetComponent<PlayerInput>();
-      rigidbody = GetComponent<Rigidbody>();
+      rb = GetComponent<Rigidbody>();
       virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
       moveAction = playerInput.actions["move"];
       modifiedSpeed = moveSpeed;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
       cameraRight.Normalize();
       
       // Move player
-      rigidbody.MovePosition(transform.position + (cameraForward * moveDirection.y + cameraRight * moveDirection.x) * modifiedSpeed * Time.deltaTime);
+      rb.MovePosition(transform.position + (cameraForward * moveDirection.y + cameraRight * moveDirection.x) * modifiedSpeed * Time.deltaTime);
       
       // Rotate player
       if(moveDirection.magnitude > 0.1f)

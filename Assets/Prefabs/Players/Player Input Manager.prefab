@@ -92,3 +92,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPointPlayer1: {fileID: 0}
   spawnPointPlayer2: {fileID: 0}
+  player1Material: {fileID: 2100000, guid: 7f9ad2808c0371144a1b8dee3552a756, type: 2}
+  player2Material: {fileID: 2100000, guid: dbf2fd6b2488a25499708b02344f9d97, type: 2}

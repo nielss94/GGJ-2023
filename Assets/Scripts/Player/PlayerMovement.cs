@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
+   
+   [SerializeField] private GameObject model;
    [SerializeField] private float moveSpeed = 2.0f;
    
    private PlayerInput playerInput;
@@ -43,6 +45,16 @@ public class PlayerMovement : MonoBehaviour
       cameraRight.y = 0;
       cameraForward.Normalize();
       cameraRight.Normalize();
+      
+      // Move player
       rigidbody.MovePosition(transform.position + (cameraForward * moveDirection.y + cameraRight * moveDirection.x) * moveSpeed * Time.deltaTime);
+      
+      // Rotate player
+      if(moveDirection.magnitude > 0.1f)
+      {
+         var direction = cameraForward * moveDirection.y + cameraRight * moveDirection.x;
+         model.transform.rotation = Quaternion.Slerp(model.transform.rotation, Quaternion.LookRotation(direction), 0.15f);
+      }
+      
    }
 }

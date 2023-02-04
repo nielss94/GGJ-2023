@@ -9,6 +9,7 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(PlayerTeam), typeof(PlayerMovement))]
 public class PlayerSporeGun : MonoBehaviour
 {
+    public event Action<bool> OnSprayingChanged = delegate {  };
     public event Action OnPickUpSpore = delegate {  };
     public event Action OnPlaceSpore = delegate {  };
     [SerializeField] private ResourceHolder resourceHolder;
@@ -74,6 +75,7 @@ public class PlayerSporeGun : MonoBehaviour
     {
         if (startPlaceTimer && resourceHolder.CanSpendSpores(1))
         {
+            OnSprayingChanged?.Invoke(true);
             placeTimer -= Time.deltaTime;
             playerMovement.AllowedToMove = false;
         }
@@ -93,17 +95,16 @@ public class PlayerSporeGun : MonoBehaviour
     {
         playerMovement.AllowedToMove = true;
         placeTimer = initialPlaceTimer;
+        OnSprayingChanged?.Invoke(false);
     }
 
     private void OnPlaceFungus(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Start pressing the button!");
         startPlaceTimer = true;
     }
 
     private void OnCancelFungusPlacement(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Stop pressing the button!");
         startPlaceTimer = false;
         placeTimer = initialPlaceTimer;
     }
@@ -130,6 +131,7 @@ public class PlayerSporeGun : MonoBehaviour
             {
                 tile.SetTile(TileType.Fungus, playerTeam.Team);
                 OnPlaceSpore?.Invoke();
+                OnSprayingChanged?.Invoke(false);
             }
         }
     }

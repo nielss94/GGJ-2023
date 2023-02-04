@@ -130,6 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Particles: {fileID: 3050220553820681130}
   team2Particles: {fileID: 9182576695444534660}
+  fadeInSpeed: 3
+  ease: 15
+  fadeInTransform: {fileID: 1615963592211381916}
 --- !u!1001 &6356505619954463897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,6 +290,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5504341643626540574, guid: 399b5e89caf774c49abd1c936d34a485,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5798167651925284780, guid: 399b5e89caf774c49abd1c936d34a485,
         type: 3}
       propertyPath: m_IsActive
@@ -299,6 +307,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 399b5e89caf774c49abd1c936d34a485, type: 3}
+--- !u!4 &1615963592211381916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5504341643626540574, guid: 399b5e89caf774c49abd1c936d34a485,
+    type: 3}
+  m_PrefabInstance: {fileID: 6489220717857919106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &3050220553820681130 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8096021540645462824, guid: 399b5e89caf774c49abd1c936d34a485,

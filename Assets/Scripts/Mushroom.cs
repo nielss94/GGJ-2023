@@ -28,20 +28,18 @@ public class Mushroom : MonoBehaviour
         }
     }
 
-    public GameObject TakeSpore(bool destroySpore = false)
+    public void TakeSpore(GameObject spore, bool destroySpore = false)
     {
         if (spores.Count > 0)
         {
-            var spore = spores[0];
-            spores.RemoveAt(0);
+            var match = spores.Find(g => g == spore);
+            spores.RemoveAt(spores.IndexOf(match));
             if (destroySpore)
             {
                 Destroy(spore);
             }
             SetSporePositions();
-            return spore;
         }
-        return null;
     }
     
     private IEnumerator SpawnSpore()
@@ -50,6 +48,7 @@ public class Mushroom : MonoBehaviour
         var newSpore = Instantiate(sporePrefab, (sporeContainer.transform.position), Quaternion.identity, sporeContainer.transform);
         spores.Add(newSpore);
         SetSporePositions();
+        newSpore.GetComponent<Spore>().sourceMushroom = this;
         yield return new WaitForSeconds(spawnCooldown);
         onCooldown = false;
     }
@@ -74,6 +73,10 @@ public class Mushroom : MonoBehaviour
         var t = 0f;
         while (t < 1f)
         {
+            if (spore == null)
+            {
+                yield break;
+            }
             t += Time.deltaTime * 2f;
             spore.transform.localPosition = Vector3.Slerp(startPosition, targetPosition, t);
             // TODO: scale up after spawning

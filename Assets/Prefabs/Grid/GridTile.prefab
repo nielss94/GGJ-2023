@@ -120,6 +120,7 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
+  treeMaterial: {fileID: 2100000, guid: fb4910047ba2cd646b17db88a999fe4d, type: 2}
   tileHolder: {fileID: 6792622797743160167}
   tileType: 0
   team: 0
@@ -174,6 +175,8 @@ MonoBehaviour:
   mushroomTilePrefab: {fileID: -4471347414596681077, guid: 0eb72ff7def73cd429e0f1c95e72d80d,
     type: 3}
   fungusTilePrefab: {fileID: -6765527501552743231, guid: 8655f3b9948fdd34eac08f702d0cb928,
+    type: 3}
+  treeTilePrefab: {fileID: -6765527501552743231, guid: ed1a21e3b90ac624c924a087746a28e3,
     type: 3}
 --- !u!1 &8449820212893307443
 GameObject:

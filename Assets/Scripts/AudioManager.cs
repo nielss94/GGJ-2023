@@ -13,12 +13,21 @@ public class AudioManager : MonoBehaviour
         Instance = this;
     }
     
-    public void PlaySound(AudioClip clip, Vector3 position)
+    public GameObject PlaySound(AudioClip clip, Vector3 position, bool loop = false, float volume = 1f)
     {
         GameObject audioSourceObject = Instantiate(audioSourcePrefab, position, Quaternion.identity);
         AudioSource audioSource = audioSourceObject.GetComponent<AudioSource>();
         audioSource.clip = clip;
+        audioSource.loop = loop;
+        audioSource.volume = volume;
         audioSource.Play();
-        Destroy(audioSourceObject, clip.length);
+
+        if (!loop)
+        {
+            Destroy(audioSourceObject, clip.length);
+        }
+
+        return audioSourceObject;
     }
+    
 }

@@ -76,6 +76,7 @@ public class Mushroom : MonoBehaviour
         {
             t += Time.deltaTime * 2f;
             spore.transform.localPosition = Vector3.Slerp(startPosition, targetPosition, t);
+            // TODO: scale up after spawning
             yield return null;
         }
     }

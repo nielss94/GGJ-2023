@@ -82,6 +82,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527481486928}
   tileType: 0
   team: 0
@@ -559,6 +562,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527207944603}
   tileType: 0
   team: 0
@@ -955,6 +961,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527333756212}
   tileType: 0
   team: 0
@@ -1092,6 +1101,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528093881094}
   tileType: 0
   team: 0
@@ -1229,6 +1241,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527094184695}
   tileType: 0
   team: 0
@@ -1345,6 +1360,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528591277423}
   tileType: 0
   team: 0
@@ -1482,6 +1500,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528365923578}
   tileType: 0
   team: 0
@@ -1992,6 +2013,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527844941593}
   tileType: 0
   team: 0
@@ -2046,6 +2070,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528016669799}
   tileType: 0
   team: 0
@@ -2100,6 +2127,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527345071336}
   tileType: 0
   team: 0
@@ -2154,6 +2184,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528277787932}
   tileType: 0
   team: 0
@@ -2322,6 +2355,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528102168004}
   tileType: 0
   team: 0
@@ -2490,6 +2526,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528021506929}
   tileType: 0
   team: 0
@@ -2720,6 +2759,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527632236152}
   tileType: 1
   team: 0
@@ -3272,6 +3314,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528362681656}
   tileType: 0
   team: 0
@@ -3471,6 +3516,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620529096836599}
   tileType: 0
   team: 0
@@ -3691,6 +3739,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528731014208}
   tileType: 1
   team: 0
@@ -3776,6 +3827,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528199126323}
   tileType: 0
   team: 0
@@ -3830,6 +3884,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527688356270}
   tileType: 0
   team: 0
@@ -3884,6 +3941,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528620723965}
   tileType: 0
   team: 0
@@ -3938,6 +3998,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620528411499981}
   tileType: 0
   team: 0
@@ -3992,6 +4055,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527189392646}
   tileType: 0
   team: 0
@@ -4046,6 +4112,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527224412927}
   tileType: 0
   team: 0
@@ -4131,6 +4200,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527815580057}
   tileType: 0
   team: 0
@@ -4268,6 +4340,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 0}
   fungusMaterial: {fileID: 0}
+  treeMaterial: {fileID: 0}
+  rootMaterial: {fileID: 0}
+  foodSourceMaterial: {fileID: 0}
   tileHolder: {fileID: 1248620527254340330}
   tileType: 0
   team: 0

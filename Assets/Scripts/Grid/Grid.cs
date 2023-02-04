@@ -1,36 +1,43 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
     [SerializeField] private int width;
     [SerializeField] private int height;
-    [SerializeField] private float oddOffset;
-    [SerializeField] public int mapScale = 1;
+    [SerializeField] private float xOffset;
+    [SerializeField] private float yOffset;
     
-    private Tile[,] map;
+    private Tile[][] map;
     [SerializeField] private Tile tilePrefab;
 
     public void Generate()
     {
-        var levelTransform = new GameObject("New Level").transform;
+        var level = new GameObject("New Level").AddComponent<Level>();
         map = null;
-        map = new Tile[width, height];
+        map = new Tile[width][];
         
-        for (int y = 0; y < width; y++)
+        for (int x = 0; x < width; x++)
         {
-            for (int x = 0; x < height; x++)
+            map[x] = new Tile[height];
+            for (int y = 0; y < height; y++)
             {
-                Vector3 pos = new Vector3(x * mapScale, 0, y * mapScale);
-                if (y % 2 == 1)
+                Vector3 pos = new Vector3(x * xOffset, 0, y * yOffset);
+                if (x % 2 == 1)
                 {
-                    pos.x += oddOffset;
+                    pos.z -= yOffset / 2;
                 }
-                var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, levelTransform);
-                map[x, y] = newTile;
+                var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
+                newTile.name = $"Tile {x} {y}";
+                map[x][y] = newTile;
                 newTile.SetDesignTileColor();
             }
         }
+
+        level.width = width;
+        level.height = height;
     }
 }

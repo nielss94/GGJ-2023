@@ -6,7 +6,8 @@ using UnityEngine;
 public enum TileType
 {
     Empty,
-    Rock
+    Rock,
+    Mushroom
 }
 
 public class Tile : MonoBehaviour
@@ -15,14 +16,16 @@ public class Tile : MonoBehaviour
     [SerializeField] private Transform designTile;
     [SerializeField] private Material emptyMaterial;
     [SerializeField] private Material rockMaterial;
+    [SerializeField] private Material mushroomMaterial;
     
     [Header("Tile")]
     [SerializeField] private Transform tileHolder;
     [SerializeField] private TileType tileType;
-    [SerializeField] private GameObject emptyTilePrefab;
-    [SerializeField] private GameObject rockTilePrefab;
+    [SerializeField] private WorldTile emptyTilePrefab;
+    [SerializeField] private WorldTile rockTilePrefab;
+    [SerializeField] private WorldTile mushroomTilePrefab;
 
-    private GameObject currentTile;
+    private WorldTile currentTile;
 
     private void Start()
     {
@@ -48,6 +51,9 @@ public class Tile : MonoBehaviour
             case TileType.Rock:
                 designTile.GetComponent<MeshRenderer>().material = rockMaterial;
                 break;
+            case TileType.Mushroom:
+                designTile.GetComponent<MeshRenderer>().material = mushroomMaterial;
+                break;
         }
     }
     
@@ -57,9 +63,15 @@ public class Tile : MonoBehaviour
         {
             case TileType.Empty:
                 currentTile = Instantiate(emptyTilePrefab, tileHolder);
+                currentTile.rootTile = this;
                 break;
             case TileType.Rock:
                 currentTile = Instantiate(rockTilePrefab, tileHolder);
+                currentTile.rootTile = this;
+                break;
+            case TileType.Mushroom:
+                currentTile = Instantiate(mushroomTilePrefab, tileHolder);
+                currentTile.rootTile = this;
                 break;
         }
     }

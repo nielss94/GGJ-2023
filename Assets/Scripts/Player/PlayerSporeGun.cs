@@ -13,11 +13,12 @@ public class PlayerSporeGun : MonoBehaviour
     public event Action OnPickUpSpore = delegate {  };
     public event Action OnPlaceSpore = delegate {  };
     [SerializeField] private ResourceHolder resourceHolder;
-    [SerializeField] private float initialPlaceTimer = 1.0f;
-
+    [SerializeField] private float initialPlaceTimer = 0f;
+    [SerializeField] private float maxPlaceTimer = 1;
+    
     public float MaxPlaceTimer
     {
-        get { return initialPlaceTimer; }
+        get { return maxPlaceTimer; }
     }
 
     private PlayerInput playerInput;
@@ -76,7 +77,7 @@ public class PlayerSporeGun : MonoBehaviour
         if (startPlaceTimer && resourceHolder.CanSpendSpores(1))
         {
             OnSprayingChanged?.Invoke(true);
-            placeTimer -= Time.deltaTime;
+            placeTimer += Time.deltaTime;
             playerMovement.AllowedToMove = false;
         }
         else
@@ -84,7 +85,7 @@ public class PlayerSporeGun : MonoBehaviour
             ResetPlacing();
         }
 
-        if (placeTimer <= 0)
+        if (placeTimer >= maxPlaceTimer)
         {
             PlaceFungus();
             ResetPlacing();

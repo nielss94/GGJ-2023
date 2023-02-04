@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Place Fungus",
+                    "type": "Button",
+                    "id": "fb991bef-6ae9-4129-8c45-caf3bc88002e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -145,6 +154,39 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71449b3f-16de-44b5-9ffd-aeb76ae575cc",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Place Fungus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f956c9f-4ff3-4d14-ae31-f34caa2e020f",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Place Fungus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d792cff-4bda-4310-acbb-257d196c0678",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Place Fungus",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

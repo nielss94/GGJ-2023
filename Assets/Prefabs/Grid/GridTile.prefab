@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4447756384419419105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653356118341556192}
+  - component: {fileID: 7040408816126426582}
+  - component: {fileID: 7296956169434328982}
+  m_Layer: 9
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653356118341556192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447756384419419105}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8449820212396450143}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &7040408816126426582
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447756384419419105}
+  m_Mesh: {fileID: 5062246478642505140, guid: 478403e522fe3534b81b339139452155, type: 3}
+--- !u!64 &7296956169434328982
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447756384419419105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5062246478642505140, guid: 478403e522fe3534b81b339139452155, type: 3}
 --- !u!1 &8449820212396450141
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +86,7 @@ Transform:
   m_Children:
   - {fileID: 8449820212893307442}
   - {fileID: 8449820212427205467}
+  - {fileID: 653356118341556192}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,14 +106,10 @@ MonoBehaviour:
   emptyMaterial: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
-  tileHolder: {fileID: 8449820212427205467}
+  fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
+  tileHolder: {fileID: 6792622797743160167}
   tileType: 0
-  emptyTilePrefab: {fileID: -4471347414596681077, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
-    type: 3}
-  rockTilePrefab: {fileID: -6765527501552743231, guid: d6839bb473da1a748b5290164a125130,
-    type: 3}
-  mushroomTilePrefab: {fileID: -4471347414596681077, guid: 0eb72ff7def73cd429e0f1c95e72d80d,
-    type: 3}
+  team: 0
 --- !u!1 &8449820212427205464
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8449820212427205467}
+  - component: {fileID: 6792622797743160167}
   m_Layer: 0
   m_Name: TileHolder
   m_TagString: Untagged
@@ -81,7 +134,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8449820212427205464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -89,6 +142,26 @@ Transform:
   m_Father: {fileID: 8449820212396450143}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6792622797743160167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449820212427205464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a35057c0735dcc47b6509fcaddcf2a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyTilePrefab: {fileID: -4471347414596681077, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
+    type: 3}
+  rockTilePrefab: {fileID: -6765527501552743231, guid: d6839bb473da1a748b5290164a125130,
+    type: 3}
+  mushroomTilePrefab: {fileID: -4471347414596681077, guid: 0eb72ff7def73cd429e0f1c95e72d80d,
+    type: 3}
+  fungusTilePrefab: {fileID: -6765527501552743231, guid: 8655f3b9948fdd34eac08f702d0cb928,
+    type: 3}
 --- !u!1 &8449820212893307443
 GameObject:
   m_ObjectHideFlags: 0

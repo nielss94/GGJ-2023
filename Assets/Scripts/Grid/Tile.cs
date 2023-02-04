@@ -7,7 +7,8 @@ public enum TileType
 {
     Empty,
     Rock,
-    Mushroom
+    Mushroom,
+    Fungus
 }
 
 public class Tile : MonoBehaviour
@@ -17,20 +18,21 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material emptyMaterial;
     [SerializeField] private Material rockMaterial;
     [SerializeField] private Material mushroomMaterial;
+    [SerializeField] private Material fungusMaterial;
     
     [Header("Tile")]
-    [SerializeField] private Transform tileHolder;
+    [SerializeField] private TileHolder tileHolder;
     [SerializeField] private TileType tileType;
-    [SerializeField] private WorldTile emptyTilePrefab;
-    [SerializeField] private WorldTile rockTilePrefab;
-    [SerializeField] private WorldTile mushroomTilePrefab;
+    [SerializeField] private int team;
 
-    private WorldTile currentTile;
+    public TileType Type { get; set; }
 
     private void Start()
     {
         designTile.GetComponent<MeshRenderer>().enabled = false;
-        SpawnTiles();
+        
+        tileHolder.Init(this);
+        tileHolder.SetTile(tileType, team);
     }
 
     private void OnValidate()
@@ -54,24 +56,8 @@ public class Tile : MonoBehaviour
             case TileType.Mushroom:
                 designTile.GetComponent<MeshRenderer>().material = mushroomMaterial;
                 break;
-        }
-    }
-    
-    private void SpawnTiles()
-    {
-        switch (tileType)
-        {
-            case TileType.Empty:
-                currentTile = Instantiate(emptyTilePrefab, tileHolder);
-                currentTile.rootTile = this;
-                break;
-            case TileType.Rock:
-                currentTile = Instantiate(rockTilePrefab, tileHolder);
-                currentTile.rootTile = this;
-                break;
-            case TileType.Mushroom:
-                currentTile = Instantiate(mushroomTilePrefab, tileHolder);
-                currentTile.rootTile = this;
+            case TileType.Fungus:
+                designTile.GetComponent<MeshRenderer>().material = fungusMaterial;
                 break;
         }
     }

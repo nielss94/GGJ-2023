@@ -5,14 +5,25 @@ using UnityEngine;
 
 public class ResourceHolder : MonoBehaviour
 {
+    [SerializeField] private int maxSpores = 3;
     private int spores = 0;
     public int Spores { get { return spores; } }
     
     // Event that changes when spore count changes
     public event Action<int> OnSporesChanged;
 
+    public bool CanAddSpores(int amount)
+    {
+        return spores + amount <= maxSpores;
+    }
+    
     public void AddSpores(int amount)
     {
+        if(!CanAddSpores(amount))
+        {
+            return;
+        }
+        
         spores += amount;
         TriggerOnSporesChanged();
     }

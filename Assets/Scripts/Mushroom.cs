@@ -9,7 +9,12 @@ public class Mushroom : MonoBehaviour
     [SerializeField] private GameObject sporePrefab;
     [SerializeField] private float spawnCooldown = 3f;
     [SerializeField] private float spawnRadius = 1f;
+    [SerializeField] private int maxSporeSpawn = 4;
 
+    private PlayerSpawner playerSpawner;
+    private bool spawningStarted = false;
+    
+    private int team = 0;
     private bool isSpawning = true;
     private bool onCooldown = false;
     private SporeContainer sporeContainer;
@@ -17,12 +22,19 @@ public class Mushroom : MonoBehaviour
 
     private void Awake()
     {
+        playerSpawner = FindObjectOfType<PlayerSpawner>();
         sporeContainer = GetComponentInChildren<SporeContainer>();
+    }
+
+    private void Start()
+    {
+        playerSpawner.OnAllPlayersSpawned += () => spawningStarted = true;
+        team = GetComponentInParent<WorldTile>().Team;
     }
 
     private void Update()
     {
-        if (isSpawning && !onCooldown)
+        if (isSpawning && !onCooldown && spawningStarted)
         {
             StartCoroutine(SpawnSpore());
         }
@@ -44,11 +56,22 @@ public class Mushroom : MonoBehaviour
     
     private IEnumerator SpawnSpore()
     {
+        if(spores.Count >= maxSporeSpawn)
+        {
+            yield return new WaitForSeconds(spawnCooldown);
+            yield break;
+        }
+        
         onCooldown = true;
         var newSpore = Instantiate(sporePrefab, (sporeContainer.transform.position), Quaternion.identity, sporeContainer.transform);
         spores.Add(newSpore);
         SetSporePositions();
-        newSpore.GetComponent<Spore>().sourceMushroom = this;
+
+        var spore = newSpore.GetComponent<Spore>();
+        
+        spore.sourceMushroom = this;
+        spore.Team = team;
+        
         yield return new WaitForSeconds(spawnCooldown);
         onCooldown = false;
     }

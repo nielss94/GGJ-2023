@@ -54,6 +54,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4320abee745145a49a8e6e49920ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unassignedMaterial: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  team1Material: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  team2Material: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  rootTile: {fileID: 0}
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

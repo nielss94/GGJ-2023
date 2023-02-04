@@ -17,6 +17,7 @@ public class PlayerSpawner : MonoBehaviour
     private PlayerInputManager playerInputManager;
     
     public event Action<PlayerInput> OnSpawnedPlayer;
+    public event Action OnAllPlayersSpawned;
     
     private bool allPlayersSpawned = false;
     public bool AllPlayersSpawned
@@ -39,6 +40,8 @@ public class PlayerSpawner : MonoBehaviour
         var playerNumber = playerInput.playerIndex + 1;
         var playerGameObject = playerInput.gameObject;
         
+        
+        SetPlayerTeam(playerGameObject, playerNumber);
         SetPlayerMaterial(playerGameObject, playerNumber);
         SetPlayerPosition(playerGameObject, playerNumber);
         SetPlayerVirtaulCamera(playerGameObject, playerNumber);
@@ -49,7 +52,13 @@ public class PlayerSpawner : MonoBehaviour
         if (playerNumber == 2)
         {
             allPlayersSpawned = true;
+            OnAllPlayersSpawned?.Invoke();
         }
+    }
+    
+    private void SetPlayerTeam(GameObject playerGameObject, int number)
+    {
+        playerGameObject.GetComponent<PlayerTeam>().SetTeam(number);
     }
     
     private void SetPlayerMaterial(GameObject playerGameObject, int number)

@@ -55,6 +55,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4320abee745145a49a8e6e49920ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unassignedMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
+  team1Material: {fileID: 2100000, guid: be071a35d7124a64cbcae4c86f26f2ef, type: 2}
+  team2Material: {fileID: 2100000, guid: 5063dce614c19414eb95f18919df08d6, type: 2}
+  tileType: 2
   rootTile: {fileID: 0}
 --- !u!1001 &4509740672459307592
 PrefabInstance:
@@ -118,6 +122,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 478403e522fe3534b81b339139452155,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
     - target: {fileID: 919132149155446097, guid: 478403e522fe3534b81b339139452155,
         type: 3}
       propertyPath: m_Name

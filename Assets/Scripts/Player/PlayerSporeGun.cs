@@ -100,6 +100,7 @@ public class PlayerSporeGun : MonoBehaviour
 
     private void OnPlaceFungus(InputAction.CallbackContext ctx)
     {
+        if (!CanPlaceFungus()) return;
         startPlaceTimer = true;
         if (resourceHolder.CanSpendSpores(1))
         {
@@ -125,8 +126,6 @@ public class PlayerSporeGun : MonoBehaviour
             var tile = overlap.transform.parent.GetComponentInChildren<TileHolder>();
             if (tile != null)
             {
-                Debug.Log(tile.CurrentTile.TileType);
-                
                 if (tile.CurrentTile.TileType != TileType.Empty) return;
                 
                 if (resourceHolder.TrySpendSpores(1))
@@ -137,29 +136,22 @@ public class PlayerSporeGun : MonoBehaviour
                 }
             }
         }
-        
-        // Raycast to hit WorldTile undearneath player
-        // var ray = new Ray(transform.position, Vector3.down);
-        // if (Physics.Raycast(ray, out var hit, 100, LayerMask.GetMask("TileCollider")))
-        // {
-        //     // If the raycast hits a WorldTile, then get the tile and place a fungus on it
-        //     var tile = hit.transform.parent.GetComponentInChildren<TileHolder>();
-        //     
-        //     // Check if the tile is already occupied
-        //     
-        //     Debug.Log(tile.CurrentTile.TileType);
-        //     
-        //     if (tile.CurrentTile.TileType != TileType.Empty)
-        //     {
-        //         return;
-        //     }
-        //
-        //     if (resourceHolder.TrySpendSpores(1))
-        //     {
-        //         tile.SetTile(TileType.Fungus, playerTeam.Team);
-        //         OnPlaceSpore?.Invoke();
-        //         OnSprayingChanged?.Invoke(false);
-        //     }
-        // }
+    }
+
+    private bool CanPlaceFungus()
+    {
+        var overlaps = Physics.OverlapSphere(transform.position, 0f);
+        foreach (var overlap in overlaps)
+        {
+            if (overlap.transform.parent == null) continue;
+            
+            var tile = overlap.transform.parent.GetComponentInChildren<TileHolder>();
+            if (tile != null)
+            {
+                if (tile.CurrentTile.TileType == TileType.Empty) return true;
+            }
+        }
+
+        return false;
     }
 }

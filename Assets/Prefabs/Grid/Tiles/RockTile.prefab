@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 799278057271455375}
   - component: {fileID: 799278057271455472}
   - component: {fileID: -6765527501552743231}
+  - component: {fileID: 7109060554601375118}
   m_Layer: 0
   m_Name: RockTile
   m_TagString: Untagged
@@ -120,6 +121,22 @@ MonoBehaviour:
   tileType: 1
   meshRenderer: {fileID: 5762159525633878045}
   rootTile: {fileID: 0}
+--- !u!114 &7109060554601375118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799278057271455475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be2969c7f4614b40974c239c32e7e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocks:
+  - {fileID: 2736640464473245804, guid: 703ffa9fa50e1fc46a8ed1a03604e0d4, type: 3}
+  - {fileID: 6313838207922956461, guid: fcb54e5de4ae12f4a842952efb3c790c, type: 3}
+  - {fileID: 7844024628289708291, guid: aacd1ba44f306bf4d98ee1145a47adc3, type: 3}
 --- !u!1001 &1035318601427770164
 PrefabInstance:
   m_ObjectHideFlags: 0

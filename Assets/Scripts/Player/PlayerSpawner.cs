@@ -17,6 +17,12 @@ public class PlayerSpawner : MonoBehaviour
     private PlayerInputManager playerInputManager;
     
     public event Action<PlayerInput> OnSpawnedPlayer;
+    
+    private bool allPlayersSpawned = false;
+    public bool AllPlayersSpawned
+    {
+        get { return allPlayersSpawned; }
+    }
 
     private void Awake()
     {
@@ -39,6 +45,11 @@ public class PlayerSpawner : MonoBehaviour
         ExcludeCamera(playerGameObject, playerNumber);
         
         OnSpawnedPlayer?.Invoke(playerInput);
+
+        if (playerNumber == 2)
+        {
+            allPlayersSpawned = true;
+        }
     }
     
     private void SetPlayerMaterial(GameObject playerGameObject, int number)

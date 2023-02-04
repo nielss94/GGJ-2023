@@ -16,11 +16,14 @@ public class PlayerMovement : MonoBehaviour
    private Rigidbody rigidbody;
    private CinemachineVirtualCamera virtualCamera;
    private InputAction moveAction;
+   private PlayerSpawner playerSpawner;
    
    private Vector2 moveDirection = Vector2.zero;
+   private bool allowedToMove = false;
 
    private void Awake()
    {
+      playerSpawner = FindObjectOfType<PlayerSpawner>();
       playerInput = GetComponent<PlayerInput>();
       rigidbody = GetComponent<Rigidbody>();
       virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
@@ -34,11 +37,21 @@ public class PlayerMovement : MonoBehaviour
 
    void Update()
    {
+      if (!playerSpawner.AllPlayersSpawned)
+      {
+         return;
+      }
+      
       moveDirection = moveAction.ReadValue<Vector2>();
    }
 
    private void FixedUpdate()
    {
+      if (!playerSpawner.AllPlayersSpawned)
+      {
+         return;
+      }
+      
       var cameraForward = virtualCamera.transform.forward;
       var cameraRight = virtualCamera.transform.right;
       cameraForward.y = 0;

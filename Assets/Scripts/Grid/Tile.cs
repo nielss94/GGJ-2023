@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum TileType
 {
@@ -11,7 +12,7 @@ public enum TileType
     Fungus,
     Tree,
     Root,
-    FoodSource
+    Carcass
 }
 
 public class Tile : MonoBehaviour
@@ -24,7 +25,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material fungusMaterial;
     [SerializeField] private Material treeMaterial;
     [SerializeField] private Material rootMaterial;
-    [SerializeField] private Material foodSourceMaterial;
+    [SerializeField] private Material carcassMaterial;
     
     [Header("Tile")]
     [SerializeField] private TileHolder tileHolder;
@@ -71,8 +72,8 @@ public class Tile : MonoBehaviour
             case TileType.Root:
                 designTile.GetComponent<MeshRenderer>().material = rootMaterial;
                 break;
-            case TileType.FoodSource:
-                designTile.GetComponent<MeshRenderer>().material = foodSourceMaterial;
+            case TileType.Carcass:
+                designTile.GetComponent<MeshRenderer>().material = carcassMaterial;
                 break;
         }
     }

@@ -10,6 +10,7 @@ public class Mushroom : MonoBehaviour
     [SerializeField] private float spawnCooldown = 3f;
     [SerializeField] private float spawnRadius = 1f;
     [SerializeField] private int maxSporeSpawn = 4;
+    [SerializeField] private bool smoothSporePosition = false;
 
     private PlayerSpawner playerSpawner;
     private bool spawningStarted = false;
@@ -83,9 +84,15 @@ public class Mushroom : MonoBehaviour
             var angle = i * Mathf.PI * 2 / spores.Count;
             var x = Mathf.Cos(angle) * spawnRadius;
             var z = Mathf.Sin(angle) * spawnRadius;
-            // spores[i].transform.localPosition = new Vector3(x, 0, z);
-            // Start routine to slerp to the new position
-            StartCoroutine(SlerpSpore(spores[i], new Vector3(x, 0, z)));
+            
+            if (smoothSporePosition)
+            {
+                StartCoroutine(SlerpSpore(spores[i], new Vector3(x, 0, z)));
+            }
+            else
+            {
+                spores[i].transform.localPosition = new Vector3(x, 0, z);
+            }
             
         }
     }

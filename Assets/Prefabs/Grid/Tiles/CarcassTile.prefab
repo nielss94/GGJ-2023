@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: -4471347414596681077}
   - component: {fileID: -172550709714287008}
   m_Layer: 0
-  m_Name: FoodSourceTile
+  m_Name: CarcassTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

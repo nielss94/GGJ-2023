@@ -494,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 6acc895ebf50bf0448b885005180802f,
     type: 3}
-  m_NotificationBehavior: 1
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -562,6 +562,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 63864ed3-151d-4c0d-95a3-b22ef4316cf5
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb991bef-6ae9-4129-8c45-caf3bc88002e
+    m_ActionName: Player/Place Fungus[/Keyboard/f,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -610,6 +614,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceHolder: {fileID: 757632301133144802}
+  initialPlaceTimer: 1
+  placeFungus:
+    m_Name: Place Fungus
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 723b8c81-7755-49b9-bf2b-87aa1d906eb0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &1612340421829570332
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   designTile: {fileID: 8449820212893307442}
-  emptyColor: {r: 0.9528302, g: 0.9033909, b: 0.9033909, a: 1}
-  rockColor: {r: 0.5283019, g: 0.5116831, b: 0.48095408, a: 1}
+  emptyMaterial: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   tileHolder: {fileID: 8449820212427205467}
-  tileType: 1
+  tileType: 0
   emptyTilePrefab: {fileID: 8828789381613093024, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
     type: 3}
   rockTilePrefab: {fileID: 799278057271455475, guid: d6839bb473da1a748b5290164a125130,
@@ -147,7 +147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

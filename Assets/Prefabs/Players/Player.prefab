@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 8291126582298181817}
-  moveSpeed: 2
+  moveSpeed: 2.25
   boostModifier: 1.5
   slowModifier: 0.5
   AllowedToMove: 0

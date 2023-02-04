@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerTeam))]
 public class PlayerSporeGun : MonoBehaviour
 {
+    public event Action OnPickUpSpore = delegate {  };
     [SerializeField] private ResourceHolder resourceHolder;
 
     private PlayerTeam playerTeam;
@@ -31,6 +32,7 @@ public class PlayerSporeGun : MonoBehaviour
             {
                 spore.sourceMushroom.TakeSpore(spore.gameObject, true);
                 resourceHolder.AddSpores(cost);
+                OnPickUpSpore?.Invoke();
             }
         }
     }

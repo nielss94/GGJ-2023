@@ -33,9 +33,10 @@ public class WorldTile : MonoBehaviour
         UpdateMaterial();
     }
     
-    private void OnEnable()
+    public void SetRootTile(Tile rootTile)
     {
-        tileTrigger = GetComponentInChildren<TileTrigger>();
+        this.rootTile = rootTile;
+        tileTrigger = rootTile.GetComponentInChildren<TileTrigger>();
         tileTrigger.OnPlayerStay += OnPlayerStayTile;
     }
     
@@ -82,7 +83,11 @@ public class WorldTile : MonoBehaviour
             var overlaps = Physics.OverlapSphere(player.transform.position, 0f);
             foreach (var overlap in overlaps)
             {
-                if (overlap != null && overlap.TryGetComponent<WorldTile>(out WorldTile worldTile1) && worldTile1.TileType == TileType.Fungus)
+                if (overlap.transform.parent == null) continue;
+                var overlapParent = overlap.transform.parent.GetComponentInChildren<TileHolder>();
+                if (overlapParent == null) continue;
+                
+                if (overlapParent.CurrentTile.TileType == TileType.Fungus)
                 {
                     if (team == playerTeam.Team)
                     {
@@ -91,8 +96,7 @@ public class WorldTile : MonoBehaviour
                     {
                         playerMovement.SetSlow();
                     }
-                } else if (overlap != null && overlap.TryGetComponent<WorldTile>(out WorldTile worldTile2) &&
-                           worldTile2.TileType != TileType.Fungus)
+                } else if (overlapParent.CurrentTile.TileType != TileType.Fungus)
                 {
                     playerMovement.ResetSpeed();
                 }
@@ -102,6 +106,8 @@ public class WorldTile : MonoBehaviour
 
     private void OnDisable()
     {
+        if (tileTrigger == null) return;
+        
         tileTrigger.OnPlayerStay -= OnPlayerStayTile;
     }
 }

@@ -20,7 +20,11 @@ public class PlayerMovement : MonoBehaviour
    
    private Vector2 moveDirection = Vector2.zero;
    private bool allowedToMove = false;
-
+   
+   public Vector2 MoveDirection
+   {
+      get { return moveDirection; }
+   }
    private void Awake()
    {
       playerSpawner = FindObjectOfType<PlayerSpawner>();

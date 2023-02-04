@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerSporeGun : MonoBehaviour
 {
     public event Action OnPickUpSpore = delegate {  };
+    public event Action OnPlaceSpore = delegate {  };
     [SerializeField] private ResourceHolder resourceHolder;
 
     private PlayerTeam playerTeam;
@@ -58,6 +59,7 @@ public class PlayerSporeGun : MonoBehaviour
             if (resourceHolder.TrySpendSpores(1))
             {
                 tile.SetTile(TileType.Fungus, playerTeam.Team);
+                OnPlaceSpore?.Invoke();
             }
         }
     }

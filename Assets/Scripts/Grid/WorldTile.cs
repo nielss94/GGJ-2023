@@ -11,6 +11,8 @@ public class WorldTile : MonoBehaviour
 
     [SerializeField] private TileType tileType;
 
+    [SerializeField] private MeshRenderer meshRenderer;
+    
     public TileType TileType
     {
         get { return tileType; }
@@ -32,9 +34,6 @@ public class WorldTile : MonoBehaviour
     
     private void UpdateMaterial()
     {
-        // TODO: If more meshrenderers this wont work
-        var meshRenderer = GetComponentInChildren<MeshRenderer>();
-        
         switch (team)
         {
             case 0:

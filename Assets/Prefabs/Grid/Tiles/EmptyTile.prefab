@@ -57,6 +57,8 @@ MonoBehaviour:
   unassignedMaterial: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
   team1Material: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
   team2Material: {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  tileType: 0
+  meshRenderer: {fileID: 2978080701841401548}
   rootTile: {fileID: 0}
 --- !u!1001 &4509740672459307592
 PrefabInstance:
@@ -127,6 +129,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478403e522fe3534b81b339139452155, type: 3}
+--- !u!23 &2978080701841401548 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 478403e522fe3534b81b339139452155,
+    type: 3}
+  m_PrefabInstance: {fileID: 4509740672459307592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3626726934951249689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 478403e522fe3534b81b339139452155,

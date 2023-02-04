@@ -160,7 +160,7 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
-  m_FillClockwise: 1
+  m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 8291126582298181817}
-  moveSpeed: 2
+  moveSpeed: 2.25
   boostModifier: 1.5
   slowModifier: 0.5
   AllowedToMove: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceHolder: {fileID: 757632301133144802}
   initialPlaceTimer: 0
-  maxPlaceTimer: 1
+  maxPlaceTimer: 1.5
 --- !u!114 &1612340421829570332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +735,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cd8001efeff9ae14591bdcda066af001, type: 3}
   - {fileID: 8300000, guid: fc6d64184d4683b4eb0e7c57d3e2767f, type: 3}
   - {fileID: 8300000, guid: 4993960e02436ca4c91c6238ba3e3588, type: 3}
+  footstepSounds:
+  - {fileID: 8300000, guid: 0aeb91bd05074ac49a8676f9ceb37e28, type: 3}
+  - {fileID: 8300000, guid: d1592acca24693d4484f505242f7b185, type: 3}
+  - {fileID: 8300000, guid: 77e9a45ab3a41184a85936ef6d6f8342, type: 3}
+  - {fileID: 8300000, guid: 1bfa4931a5cadc349abba7e40c943c28, type: 3}
+  - {fileID: 8300000, guid: e73bfbf6e51c9bb439374a4d49ab1c88, type: 3}
+  - {fileID: 8300000, guid: f9e7b4ca057af6240a03d0120588cbf7, type: 3}
+  - {fileID: 8300000, guid: 14b986fe20adb2b4ab6aed18811bcd15, type: 3}
+  - {fileID: 8300000, guid: 719f4ba303a967b449be7cd3f275ac3e, type: 3}
+  spraySounds:
+  - {fileID: 8300000, guid: 7d083fea7b997e748bbb8f994d4633dc, type: 3}
+  - {fileID: 8300000, guid: f20c451cf60a3b24289671a260442199, type: 3}
+  - {fileID: 8300000, guid: 265a0d782fe571749a748632ab9e251a, type: 3}
 --- !u!114 &3742008478169186221
 MonoBehaviour:
   m_ObjectHideFlags: 0

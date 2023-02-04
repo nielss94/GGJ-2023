@@ -42,6 +42,11 @@ public class WorldTile : MonoBehaviour
     
     private void UpdateMaterial()
     {
+        if (meshRenderer == null)
+        {
+            return;
+        }
+        
         switch (team)
         {
             case 0:

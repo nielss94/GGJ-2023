@@ -13,12 +13,13 @@ public class FungusTile : MonoBehaviour
     [SerializeField] private Ease ease;
     
     
-    public Transform fadeInTransform;
+    public MeshRenderer renderer;
     private void Start()
     {
         SetTeam(GetComponent<WorldTile>().Team);
-        fadeInTransform.localScale = Vector3.zero;
-        fadeInTransform.DOScale(Vector3.one, fadeInSpeed).SetEase(ease);
+        renderer.material.DOFloat(1, "_Grow", fadeInSpeed);
+        // fadeInTransform.localScale = Vector3.zero;
+        // fadeInTransform.DOScale(Vector3.one, fadeInSpeed).SetEase(ease);
     }
 
     public void SetTeam(int team)

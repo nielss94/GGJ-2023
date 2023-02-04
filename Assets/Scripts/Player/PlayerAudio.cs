@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class PlayerAudio : MonoBehaviour
 {
     private PlayerSporeGun sporeGun;
+    private PlayerMovement playerMovement;
 
     [SerializeField] private float sporePickUpSoundInterval = 2f;
     private int sporePickUpCount = 0;
@@ -17,16 +18,28 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private List<AudioClip> sporePickUpSounds = new List<AudioClip>();
 
     [SerializeField] private List<AudioClip> sporePlaceSounds = new List<AudioClip>();
+    
+    [SerializeField] private List<AudioClip> footstepSounds = new List<AudioClip>();
+    
+    [SerializeField] private AudioClip[] spraySounds = new AudioClip[3];
 
     // latest place clip
     private AudioClip latestPlaceClip;
+    private AudioClip latestMoveClip;
+    
+    
+    private GameObject activeLoopingSpraySound;
+
     
     private void Awake()
     {
         sporeGun = GetComponent<PlayerSporeGun>();
+        playerMovement = GetComponent<PlayerMovement>();
         
         sporeGun.OnPickUpSpore += PlayPickUpSporeSound;
         sporeGun.OnPlaceSpore += PlayPlaceSporeSound;
+        sporeGun.OnSprayingChanged += OnSprayingChanged;
+        sporeGun.OnPlaceSpore += OnPlaceSpore;
     }
 
     private void Update()
@@ -35,12 +48,51 @@ public class PlayerAudio : MonoBehaviour
         {
             sporePickUpCount = 0;
         }
+        
+        // if player movedirection is not null, play sound every 0.4 seconds
+        if (playerMovement.MoveDirection != Vector2.zero)
+        {
+            if (Time.time - latestSporePickUpTime > 0.4f)
+            {
+                PlayMoveSound();
+                
+                latestSporePickUpTime = Time.time;
+            }
+        }
+        
+    }
+    
+    private void OnPlaceSpore()
+    {
+        AudioManager.Instance.PlaySound(spraySounds[2], transform.position);
+    }
+
+
+    private void OnSprayingChanged(bool change)
+    {
+        if (change && activeLoopingSpraySound == null)
+        {
+            AudioManager.Instance.PlaySound(spraySounds[0], transform.position);
+            StartCoroutine(PlayLoopingSoundAfterSeconds(spraySounds[0].length));
+        }
+        else if (activeLoopingSpraySound != null)
+        {
+            Destroy(activeLoopingSpraySound);
+        }
+        
+    }
+
+    private IEnumerator PlayLoopingSoundAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true);
     }
 
     private void PlayPickUpSporeSound()
     {
         AudioManager.Instance.PlaySound(sporePickUpSounds[sporePickUpCount], transform.position);
-        sporePickUpCount = Mathf.Clamp(sporePickUpCount + 1, 0, 3);
+        sporePickUpCount++;
+        sporePickUpCount = Mathf.Clamp(sporePickUpCount, 0, 2);
         latestSporePickUpTime = Time.time;
     }
 
@@ -57,7 +109,25 @@ public class PlayerAudio : MonoBehaviour
         {
             // play random sound
             latestPlaceClip = sporePlaceSounds[Random.Range(0, sporePlaceSounds.Count)];
-            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position);
+            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position, false, .6f);
         }
     }
+    
+    private void PlayMoveSound()
+    {
+        if (latestMoveClip != null)
+        {
+            // play random sound that was not used before this
+            List<AudioClip> unusedSounds = footstepSounds.Where(sound => !sound.Equals(latestMoveClip)).ToList();
+            latestMoveClip = unusedSounds[Random.Range(0, unusedSounds.Count)];
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position);
+        }
+        else
+        {
+            // play random sound
+            latestMoveClip = footstepSounds[Random.Range(0, footstepSounds.Count)];
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position);
+        }
+    }
+    
 }

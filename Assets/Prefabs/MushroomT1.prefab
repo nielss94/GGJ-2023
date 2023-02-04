@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2242110722703214877}
+  - component: {fileID: 9092377166287853183}
   m_Layer: 0
   m_Name: MushroomT1
   m_TagString: Untagged
@@ -36,9 +37,71 @@ Transform:
   - {fileID: 8410365932694603554}
   - {fileID: 7253978639498597793}
   - {fileID: 5527284432737911032}
+  - {fileID: 5832232595726094821}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9092377166287853183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684289330178652012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f728f316eae67429c8a7372c4cddf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sporePrefab: {fileID: 4187885427437816566, guid: 184a965f973b4aa4aa0ea0d2d1f781c6,
+    type: 3}
+  spawnCooldown: 3
+  spawnRadius: 0.8
+  maxSporeSpawn: 4
+--- !u!1 &9136035585962576817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5832232595726094821}
+  - component: {fileID: 31593888555061445}
+  m_Layer: 0
+  m_Name: SporeContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5832232595726094821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136035585962576817}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09352386, y: -0.15105042, z: -0.062454462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2242110722703214877}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31593888555061445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136035585962576817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d6b8668e234884ac0c9a8a4202e28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3114768867183033107
 PrefabInstance:
   m_ObjectHideFlags: 0

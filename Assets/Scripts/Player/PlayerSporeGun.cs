@@ -76,7 +76,6 @@ public class PlayerSporeGun : MonoBehaviour
     {
         if (startPlaceTimer && resourceHolder.CanSpendSpores(1))
         {
-            OnSprayingChanged?.Invoke(true);
             placeTimer += Time.deltaTime;
             playerMovement.AllowedToMove = false;
         }
@@ -102,12 +101,17 @@ public class PlayerSporeGun : MonoBehaviour
     private void OnPlaceFungus(InputAction.CallbackContext ctx)
     {
         startPlaceTimer = true;
+        if (resourceHolder.CanSpendSpores(1))
+        {
+            OnSprayingChanged?.Invoke(true);
+        }
     }
 
     private void OnCancelFungusPlacement(InputAction.CallbackContext ctx)
     {
         startPlaceTimer = false;
         placeTimer = initialPlaceTimer;
+        OnSprayingChanged?.Invoke(false);
     }
     
     private void PlaceFungus()

@@ -3542,6 +3542,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.textureOffset.x
+      value: -6206.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.textureOffset.z
+      value: -6206.0693
+      objectReference: {fileID: 0}
     - target: {fileID: 3266660000238584533, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: m_Name
@@ -3601,6 +3626,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245891571035023672, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245891571035023672, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245891571035023672, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.albedo.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.textureOffset.x
+      value: -2068.6897
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
+        type: 3}
+      propertyPath: parameters.textureOffset.z
+      value: -2068.6897
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fadcbabccdfefc5439296538a965d327, type: 3}

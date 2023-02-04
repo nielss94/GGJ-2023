@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.8467, g: 2265.088, b: 3288.3984, a: 1}
+  m_IndirectSpecularColor: {r: 2160.043, g: 2263.8164, b: 3286.5586, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4834,7 +4834,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7455,7 +7455,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &157207115
 MonoBehaviour:
@@ -19478,7 +19478,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &432493155
 GameObject:
@@ -23943,7 +23943,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 1913553200}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &517777201
 GameObject:
@@ -24243,7 +24243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34259,7 +34259,7 @@ PrefabInstance:
     - target: {fileID: 2853854512370689102, guid: 1cb9ae781af7cd649b9e1b02aa1d2ecf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2853854512370689102, guid: 1cb9ae781af7cd649b9e1b02aa1d2ecf,
         type: 3}
@@ -34269,7 +34269,7 @@ PrefabInstance:
     - target: {fileID: 2853854512370689102, guid: 1cb9ae781af7cd649b9e1b02aa1d2ecf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -0.411
       objectReference: {fileID: 0}
     - target: {fileID: 2853854512370689102, guid: 1cb9ae781af7cd649b9e1b02aa1d2ecf,
         type: 3}
@@ -47356,7 +47356,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 1510718602}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &1086198284
 GameObject:
@@ -49297,12 +49297,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121664824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.5, y: 1, z: 32}
+  m_LocalPosition: {x: 27, y: 0, z: 31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122757768
 GameObject:
@@ -53291,12 +53291,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196299489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196318649
 GameObject:
@@ -55145,7 +55145,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59932,7 +59932,7 @@ PrefabInstance:
     - target: {fileID: 8795656702864803140, guid: 6905281ada4915744a42b8d783561b95,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8795656702864803140, guid: 6905281ada4915744a42b8d783561b95,
         type: 3}
@@ -64817,7 +64817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78124,7 +78124,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 717617963}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &1731772457
 GameObject:
@@ -79955,7 +79955,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 1494803415}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &1785219603
 GameObject:
@@ -90239,7 +90239,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 757277368}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &1962704268
 GameObject:
@@ -90567,7 +90567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91933,7 +91933,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93490,7 +93490,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014739607
 GameObject:
@@ -93883,7 +93883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029215061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -94288,7 +94288,7 @@ Transform:
   - {fileID: 652414263}
   - {fileID: 1729795859}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030295650
 GameObject:
@@ -94910,7 +94910,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e73493a4f97c5c46b2c996ecacb8247, type: 2}
+  - {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95859,7 +95859,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 1086424595}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &2072257985
 GameObject:
@@ -97026,7 +97026,7 @@ MonoBehaviour:
   mushroomMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   tileHolder: {fileID: 879071782}
-  tileType: 0
+  tileType: 1
   team: 0
 --- !u!1 &2095274209
 GameObject:
@@ -99313,3 +99313,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146521222}
   m_Mesh: {fileID: 5062246478642505140, guid: 478403e522fe3534b81b339139452155, type: 3}
+--- !u!1001 &662177345305624787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428386326470979316, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_Name
+      value: Tile_Highlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061230706763478094, guid: ba3edc9e9278980428fcad8958bb4520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba3edc9e9278980428fcad8958bb4520, type: 3}

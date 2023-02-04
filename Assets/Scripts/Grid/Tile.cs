@@ -13,8 +13,8 @@ public class Tile : MonoBehaviour
 {
     [Header("Design")]
     [SerializeField] private Transform designTile;
-    [SerializeField] private Color emptyColor;
-    [SerializeField] private Color rockColor;
+    [SerializeField] private Material emptyMaterial;
+    [SerializeField] private Material rockMaterial;
     
     [Header("Tile")]
     [SerializeField] private Transform tileHolder;
@@ -34,15 +34,20 @@ public class Tile : MonoBehaviour
     {
         if (!Application.isPlaying)
         {
-            switch (tileType)
-            {
-                case TileType.Empty:
-                    designTile.GetComponent<MeshRenderer>().material.color = emptyColor;
-                    break;
-                case TileType.Rock:
-                    designTile.GetComponent<MeshRenderer>().material.color = rockColor;
-                    break;
-            }
+            SetDesignTileColor();
+        }
+    }
+    
+    public void SetDesignTileColor()
+    {
+        switch (tileType)
+        {
+            case TileType.Empty:
+                designTile.GetComponent<MeshRenderer>().material = emptyMaterial;
+                break;
+            case TileType.Rock:
+                designTile.GetComponent<MeshRenderer>().material = rockMaterial;
+                break;
         }
     }
     

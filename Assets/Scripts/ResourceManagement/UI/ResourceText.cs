@@ -7,18 +7,30 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class ResourceText : MonoBehaviour
 {
-    [SerializeField] private ResourceHolder resourceHolder;
+    public ResourceHolder resourceHolder;
     private TextMeshProUGUI textMesh;
+
+    private bool subscribed = false;
 
     private void Awake()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
+    {
+        if (resourceHolder == null || subscribed)
+        {
+            return; 
+        }
+        
+        SubscribeToSporeChange();
+    }
+
+    private void SubscribeToSporeChange()
     {
         resourceHolder.OnSporesChanged += UpdateText;
+        subscribed = true;
     }
 
     private void UpdateText(int amount)

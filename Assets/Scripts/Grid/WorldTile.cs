@@ -6,6 +6,7 @@ using UnityEngine;
 public class WorldTile : MonoBehaviour
 {
     public Tile rootTile;
+    public int assignedToTeam = 0;
 
     public Tile[] GetNeighbours()
     {

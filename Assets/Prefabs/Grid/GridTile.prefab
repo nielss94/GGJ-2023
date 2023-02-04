@@ -122,7 +122,7 @@ MonoBehaviour:
   fungusMaterial: {fileID: 2100000, guid: 80b4c34c640dbae429e7cdadfbf84034, type: 2}
   treeMaterial: {fileID: 2100000, guid: fb4910047ba2cd646b17db88a999fe4d, type: 2}
   rootMaterial: {fileID: 2100000, guid: 6c11b6c200947bd4ba2e56eab6e1b068, type: 2}
-  foodSourceMaterial: {fileID: 2100000, guid: 87f20179f38fb4549b0e075c1b170167, type: 2}
+  carcassMaterial: {fileID: 2100000, guid: 87f20179f38fb4549b0e075c1b170167, type: 2}
   tileHolder: {fileID: 6792622797743160167}
   tileType: 0
   team: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
     type: 3}
   rootTilePrefab: {fileID: -4471347414596681077, guid: 578b48006848c4848a3ec9c164482f6a,
     type: 3}
-  foodSourceTilePrefab: {fileID: -4471347414596681077, guid: fe991299daebb84469ec1cbc09c9479f,
+  carcassTilePrefab: {fileID: -4471347414596681077, guid: fe991299daebb84469ec1cbc09c9479f,
     type: 3}
 --- !u!1 &8449820212893307443
 GameObject:

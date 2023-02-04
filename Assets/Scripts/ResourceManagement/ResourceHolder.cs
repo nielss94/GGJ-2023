@@ -28,9 +28,14 @@ public class ResourceHolder : MonoBehaviour
         TriggerOnSporesChanged();
     }
     
+    public bool CanSpendSpores(int amount)
+    {
+        return spores - amount >= 0;
+    }
+    
     public bool TrySpendSpores(int amount)
     {
-        if(!(spores - amount >= 0))
+        if(!CanSpendSpores(amount))
         {
             return false;
         }
@@ -41,7 +46,7 @@ public class ResourceHolder : MonoBehaviour
 
     public void SpendSpores(int amount)
     {
-        if (spores - amount < 0)
+        if (!CanSpendSpores(amount))
         {
             throw new Exception("Not enough spores to spend! (Spores: " + spores + ", Amount: " + amount + ")");
         }

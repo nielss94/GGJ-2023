@@ -55,9 +55,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4320abee745145a49a8e6e49920ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unassignedMaterial: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
-  team1Material: {fileID: 2100000, guid: be071a35d7124a64cbcae4c86f26f2ef, type: 2}
-  team2Material: {fileID: 2100000, guid: 5063dce614c19414eb95f18919df08d6, type: 2}
+  unassignedMaterial: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
+  team1Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
+  team2Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
   tileType: 2
   meshRenderer: {fileID: 2978080701841401548}
   rootTile: {fileID: 0}
@@ -127,7 +127,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 548f09ff99b246341be65ba269cfcc14, type: 2}
+      objectReference: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
     - target: {fileID: 919132149155446097, guid: 478403e522fe3534b81b339139452155,
         type: 3}
       propertyPath: m_Name

@@ -48,5 +48,7 @@ MonoBehaviour:
   height: 5
   xOffset: 1.5
   yOffset: 1.73
+  minHeightOffset: 0
+  maxHeightOffset: 0.105
   tilePrefab: {fileID: 8449820212396450140, guid: 936010bd64eebd54ab237f407fbd2a82,
     type: 3}

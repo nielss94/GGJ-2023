@@ -64,7 +64,7 @@ public class PlayerSpawner : MonoBehaviour
     private void SetPlayerMaterial(GameObject playerGameObject, int number)
     {
         // Gadverdamme! Maar ja is Game Jam toch.
-        playerGameObject.transform.Find("CH_Gasman").transform.Find("Model").GetComponent<Renderer>().material = number == 1 ? player1Material : player2Material;
+        playerGameObject.transform.Find("CH_Gasman").transform.Find("root").Find("CH_Gasman").GetComponent<Renderer>().material = number == 1 ? player1Material : player2Material;
     }
     
     private void SetPlayerPosition(GameObject playerGameObject, int number)

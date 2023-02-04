@@ -20,6 +20,13 @@ public class PlayerMovement : MonoBehaviour
    private PlayerSpawner playerSpawner;
    
    private Vector2 moveDirection = Vector2.zero;
+   
+   public bool AllowedToMove = false;
+   
+   public Vector2 MoveDirection
+   {
+      get { return moveDirection; }
+   }
    private bool allowedToMove = false;
    private float modifiedSpeed;
 
@@ -31,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
       virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
       moveAction = playerInput.actions["move"];
       modifiedSpeed = moveSpeed;
+      
+      playerInput = GetComponent<PlayerInput>();
    }
 
    void Start()
@@ -45,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
          return;
       }
       
-      moveDirection = moveAction.ReadValue<Vector2>();
+      moveDirection = !AllowedToMove ? Vector2.zero : moveAction.ReadValue<Vector2>();
    }
 
    private void FixedUpdate()

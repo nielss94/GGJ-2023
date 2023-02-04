@@ -427,6 +427,8 @@ GameObject:
   - component: {fileID: 1742109681949637664}
   - component: {fileID: 4809755807505007630}
   - component: {fileID: 1612340421829570332}
+  - component: {fileID: 6948368104617281512}
+  - component: {fileID: 3742008478169186221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -493,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 6acc895ebf50bf0448b885005180802f,
     type: 3}
-  m_NotificationBehavior: 1
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -561,6 +563,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 63864ed3-151d-4c0d-95a3-b22ef4316cf5
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb991bef-6ae9-4129-8c45-caf3bc88002e
+    m_ActionName: Player/Place Fungus[/Keyboard/f,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -580,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 8291126582298181817}
   moveSpeed: 2
+  AllowedToMove: 0
 --- !u!54 &1742109681949637664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -609,6 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceHolder: {fileID: 757632301133144802}
+  initialPlaceTimer: 1
 --- !u!114 &1612340421829570332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +630,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+--- !u!114 &6948368104617281512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765176014209247167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ee548df73ca784bb389bb0036acf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sporePickUpSoundInterval: 2
+  sporePickUpSounds:
+  - {fileID: 8300000, guid: 45881b17ea0b40f4db0465b55c25accb, type: 3}
+  - {fileID: 8300000, guid: 032135481f744ea4cb67c65d16ab3995, type: 3}
+  - {fileID: 8300000, guid: 8da3bc26bb63e8149bc1819fce80180f, type: 3}
+  sporePlaceSounds:
+  - {fileID: 8300000, guid: 72090bd200e45274a992f8f50788e3a0, type: 3}
+  - {fileID: 8300000, guid: d8749a3555f2f6f41a50c6ce0835d1e6, type: 3}
+  - {fileID: 8300000, guid: 95d524a14330b7744bcd4265a97ce589, type: 3}
+  - {fileID: 8300000, guid: cd8001efeff9ae14591bdcda066af001, type: 3}
+  - {fileID: 8300000, guid: fc6d64184d4683b4eb0e7c57d3e2767f, type: 3}
+  - {fileID: 8300000, guid: 4993960e02436ca4c91c6238ba3e3588, type: 3}
+--- !u!114 &3742008478169186221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765176014209247167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6c02fc90e94e54f84b66220bea770a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3360815391707431033}
 --- !u!1001 &9209463640529550824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,6 +759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 5208980c499e95c49bc31364cacfdd91,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2de7298f65829c3428105022068caf16, type: 2}
     - target: {fileID: 6629185934499958125, guid: 5208980c499e95c49bc31364cacfdd91,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -721,6 +771,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7f9ad2808c0371144a1b8dee3552a756, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5208980c499e95c49bc31364cacfdd91, type: 3}
+--- !u!95 &3360815391707431033 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5208980c499e95c49bc31364cacfdd91,
+    type: 3}
+  m_PrefabInstance: {fileID: 9209463640529550824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8291126582298181817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5208980c499e95c49bc31364cacfdd91,

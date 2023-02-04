@@ -19,6 +19,7 @@ public class WorldTile : MonoBehaviour
     }
     
     public Tile rootTile;
+    private TileTrigger tileTrigger;
     private int team = 0;
     
     public int Team
@@ -30,6 +31,12 @@ public class WorldTile : MonoBehaviour
     {
         this.team = team;
         UpdateMaterial();
+    }
+    
+    private void OnEnable()
+    {
+        tileTrigger = GetComponentInChildren<TileTrigger>();
+        tileTrigger.OnPlayerStay += OnPlayerStayTile;
     }
     
     private void UpdateMaterial()
@@ -62,5 +69,39 @@ public class WorldTile : MonoBehaviour
         {
             Debug.Log(neighbour.name);
         }
+    }
+
+    private void OnPlayerStayTile(GameObject player)
+    {
+        if (tileType != TileType.Fungus) return;
+
+        if (player.TryGetComponent<PlayerMovement>(out PlayerMovement playerMovement) && 
+            player.TryGetComponent<PlayerTeam>(out PlayerTeam playerTeam))
+        {
+            // Check if the player's pivot is over fungus tile
+            var overlaps = Physics.OverlapSphere(player.transform.position, 0f);
+            foreach (var overlap in overlaps)
+            {
+                if (overlap != null && overlap.TryGetComponent<WorldTile>(out WorldTile worldTile1) && worldTile1.TileType == TileType.Fungus)
+                {
+                    if (team == playerTeam.Team)
+                    {
+                        playerMovement.SetBoost();
+                    } else if (team != playerTeam.Team && team != 0)
+                    {
+                        playerMovement.SetSlow();
+                    }
+                } else if (overlap != null && overlap.TryGetComponent<WorldTile>(out WorldTile worldTile2) &&
+                           worldTile2.TileType != TileType.Fungus)
+                {
+                    playerMovement.ResetSpeed();
+                }
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        tileTrigger.OnPlayerStay -= OnPlayerStayTile;
     }
 }

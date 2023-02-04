@@ -112,28 +112,50 @@ public class PlayerSporeGun : MonoBehaviour
     
     private void PlaceFungus()
     {
-        // Raycast to hit WorldTile undearneath player
-        var ray = new Ray(transform.position, Vector3.down);
-        if (Physics.Raycast(ray, out var hit, 100, LayerMask.GetMask("TileCollider")))
+        // Check if player is on a tile
+        var overlaps = Physics.OverlapSphere(transform.position, 0f);
+        foreach (var overlap in overlaps)
         {
-            // If the raycast hits a WorldTile, then get the tile and place a fungus on it
-            var tile = hit.transform.parent.GetComponentInChildren<TileHolder>();
+            if (overlap.transform.parent == null) continue;
             
-            // Check if the tile is already occupied
-            
-            Debug.Log(tile.CurrentTile.TileType);
-            
-            if (tile.CurrentTile.TileType != TileType.Empty)
+            var tile = overlap.transform.parent.GetComponentInChildren<TileHolder>();
+            if (tile != null)
             {
-                return;
-            }
-
-            if (resourceHolder.TrySpendSpores(1))
-            {
-                tile.SetTile(TileType.Fungus, playerTeam.Team);
-                OnPlaceSpore?.Invoke();
-                OnSprayingChanged?.Invoke(false);
+                Debug.Log(tile.CurrentTile.TileType);
+                
+                if (tile.CurrentTile.TileType != TileType.Empty) return;
+                
+                if (resourceHolder.TrySpendSpores(1))
+                {
+                    tile.SetTile(TileType.Fungus, playerTeam.Team);
+                    OnPlaceSpore?.Invoke();
+                    OnSprayingChanged?.Invoke(false);
+                }
             }
         }
+        
+        // Raycast to hit WorldTile undearneath player
+        // var ray = new Ray(transform.position, Vector3.down);
+        // if (Physics.Raycast(ray, out var hit, 100, LayerMask.GetMask("TileCollider")))
+        // {
+        //     // If the raycast hits a WorldTile, then get the tile and place a fungus on it
+        //     var tile = hit.transform.parent.GetComponentInChildren<TileHolder>();
+        //     
+        //     // Check if the tile is already occupied
+        //     
+        //     Debug.Log(tile.CurrentTile.TileType);
+        //     
+        //     if (tile.CurrentTile.TileType != TileType.Empty)
+        //     {
+        //         return;
+        //     }
+        //
+        //     if (resourceHolder.TrySpendSpores(1))
+        //     {
+        //         tile.SetTile(TileType.Fungus, playerTeam.Team);
+        //         OnPlaceSpore?.Invoke();
+        //         OnSprayingChanged?.Invoke(false);
+        //     }
+        // }
     }
 }

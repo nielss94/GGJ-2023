@@ -41,19 +41,23 @@ public class TileHolder : MonoBehaviour
         {
             case TileType.Empty:
                 currentTile = Instantiate(emptyTilePrefab, transform);
-                currentTile.rootTile = tile;
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
                 break;
             case TileType.Rock:
                 currentTile = Instantiate(rockTilePrefab, transform);
-                currentTile.rootTile = tile;
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
                 break;
             case TileType.Mushroom:
                 currentTile = Instantiate(mushroomTilePrefab, transform);
-                currentTile.rootTile = tile;
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
                 break;
             case TileType.Fungus:
                 currentTile = Instantiate(fungusTilePrefab, transform);
-                currentTile.rootTile = tile;
+                // currentTile.rootTile = tile;
+                currentTile.SetRootTile(tile);
                 break;
         }
     }

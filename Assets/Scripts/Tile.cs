@@ -11,19 +11,43 @@ public enum TileType
 
 public class Tile : MonoBehaviour
 {
-    public Transform tileHolder;
-    public TileType tileType;
-    public GameObject emptyTilePrefab;
-    public GameObject rockTilePrefab;
+    [Header("Design")]
+    [SerializeField] private Transform designTile;
+    [SerializeField] private Color emptyColor;
+    [SerializeField] private Color rockColor;
+    
+    [Header("Tile")]
+    [SerializeField] private Transform tileHolder;
+    [SerializeField] private TileType tileType;
+    [SerializeField] private GameObject emptyTilePrefab;
+    [SerializeField] private GameObject rockTilePrefab;
 
     private GameObject currentTile;
 
+    private void Start()
+    {
+        designTile.GetComponent<MeshRenderer>().enabled = false;
+        SpawnTiles();
+    }
+
     private void OnValidate()
     {
-        if (currentTile != null)
+        if (!Application.isPlaying)
         {
-            DestroyImmediate(currentTile);
+            switch (tileType)
+            {
+                case TileType.Empty:
+                    designTile.GetComponent<MeshRenderer>().material.color = emptyColor;
+                    break;
+                case TileType.Rock:
+                    designTile.GetComponent<MeshRenderer>().material.color = rockColor;
+                    break;
+            }
         }
+    }
+    
+    private void SpawnTiles()
+    {
         switch (tileType)
         {
             case TileType.Empty:

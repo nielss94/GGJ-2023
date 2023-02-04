@@ -8,8 +8,6 @@ public class ResourceAmountUI : MonoBehaviour
     [SerializeField] private PlayerSpawner playerSpawner;
     [SerializeField] private ResourceText resourceTextPlayer1;
     [SerializeField] private ResourceText resourceTextPlayer2;
-    [SerializeField] private UseSporeProgress useSporeProgressPlayer1;
-    [SerializeField] private UseSporeProgress useSporeProgressPlayer2;
 
     // Start is called before the first frame update
     void Awake()
@@ -24,12 +22,10 @@ public class ResourceAmountUI : MonoBehaviour
         if (number == 1)
         {
             resourceTextPlayer1.resourceHolder = playerInput.GetComponent<ResourceHolder>();
-            useSporeProgressPlayer1.PlayerSporeGun = playerInput.GetComponent<PlayerSporeGun>();
         }
         else
         {
             resourceTextPlayer2.resourceHolder = playerInput.GetComponent<ResourceHolder>();
-            useSporeProgressPlayer2.PlayerSporeGun = playerInput.GetComponent<PlayerSporeGun>();
         }
     }
 }

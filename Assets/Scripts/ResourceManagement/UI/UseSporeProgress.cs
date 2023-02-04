@@ -4,24 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
 public class UseSporeProgress : MonoBehaviour
 {
+    [SerializeField] private Transform cameraTransform;
     
     public PlayerSporeGun PlayerSporeGun;
 
-    private Slider slider;
-
-    private void Awake()
-    {
-        slider = GetComponent<Slider>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Image image;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +20,9 @@ public class UseSporeProgress : MonoBehaviour
             return;
         }
         
-        slider.value = PlayerSporeGun.PlaceTimer / PlayerSporeGun.MaxPlaceTimer;
+        image.fillAmount = PlayerSporeGun.PlaceTimer / PlayerSporeGun.MaxPlaceTimer;
+        
+        // image always face camera
+        image.transform.parent.LookAt(cameraTransform);
     }
 }

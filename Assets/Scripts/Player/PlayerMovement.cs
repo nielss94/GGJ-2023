@@ -8,9 +8,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-   
    [SerializeField] private GameObject model;
    [SerializeField] private float moveSpeed = 2.0f;
+   [SerializeField] private float boostModifier = 1.5f;
+   [SerializeField] private float slowModifier = 0.5f;
    
    private PlayerInput playerInput;
    private Rigidbody rigidbody;
@@ -26,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
    {
       get { return moveDirection; }
    }
+   private bool allowedToMove = false;
+   private float modifiedSpeed;
+
    private void Awake()
    {
       playerSpawner = FindObjectOfType<PlayerSpawner>();
@@ -33,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
       rigidbody = GetComponent<Rigidbody>();
       virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
       moveAction = playerInput.actions["move"];
+      modifiedSpeed = moveSpeed;
       
       playerInput = GetComponent<PlayerInput>();
    }
@@ -67,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
       cameraRight.Normalize();
       
       // Move player
-      rigidbody.MovePosition(transform.position + (cameraForward * moveDirection.y + cameraRight * moveDirection.x) * moveSpeed * Time.deltaTime);
+      rigidbody.MovePosition(transform.position + (cameraForward * moveDirection.y + cameraRight * moveDirection.x) * modifiedSpeed * Time.deltaTime);
       
       // Rotate player
       if(moveDirection.magnitude > 0.1f)
@@ -76,5 +81,20 @@ public class PlayerMovement : MonoBehaviour
          model.transform.rotation = Quaternion.Slerp(model.transform.rotation, Quaternion.LookRotation(direction), 0.15f);
       }
       
+   }
+
+   public void SetBoost()
+   {
+      modifiedSpeed = moveSpeed * boostModifier;
+   }
+   
+   public void SetSlow()
+   {
+      modifiedSpeed = moveSpeed * slowModifier;
+   }
+
+   public void ResetSpeed()
+   {
+      modifiedSpeed = moveSpeed;
    }
 }

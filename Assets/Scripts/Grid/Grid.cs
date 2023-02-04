@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -35,7 +36,12 @@ public class Grid : MonoBehaviour
                     pos.z -= yOffset / 2;
                 }
                 pos.y += Random.Range(minHeightOffset, maxHeightOffset);
-                var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
+                // var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
+                // var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
+                var newTile = PrefabUtility.InstantiatePrefab(tilePrefab) as Tile;
+                newTile.transform.parent = level.transform;
+                newTile.transform.position = pos;
+                
                 newTile.name = $"Tile {x} {y}";
                 map[x][y] = newTile;
                 newTile.SetDesignTileColor();

@@ -19,6 +19,7 @@ public class WorldTile : MonoBehaviour
     }
     
     public Tile rootTile;
+    private TileTrigger tileTrigger;
     private int team = 0;
     
     public int Team
@@ -30,6 +31,13 @@ public class WorldTile : MonoBehaviour
     {
         this.team = team;
         UpdateMaterial();
+    }
+    
+    public void SetRootTile(Tile rootTile)
+    {
+        this.rootTile = rootTile;
+        tileTrigger = rootTile.GetComponentInChildren<TileTrigger>();
+        tileTrigger.OnPlayerStay += OnPlayerStayTile;
     }
     
     private void UpdateMaterial()
@@ -67,5 +75,44 @@ public class WorldTile : MonoBehaviour
         {
             Debug.Log(neighbour.name);
         }
+    }
+
+    private void OnPlayerStayTile(GameObject player)
+    {
+        if (tileType != TileType.Fungus) return;
+
+        if (player.TryGetComponent<PlayerMovement>(out PlayerMovement playerMovement) && 
+            player.TryGetComponent<PlayerTeam>(out PlayerTeam playerTeam))
+        {
+            // Check if the player's pivot is over fungus tile
+            var overlaps = Physics.OverlapSphere(player.transform.position, 0f);
+            foreach (var overlap in overlaps)
+            {
+                if (overlap.transform.parent == null) continue;
+                var overlapParent = overlap.transform.parent.GetComponentInChildren<TileHolder>();
+                if (overlapParent == null) continue;
+                
+                if (overlapParent.CurrentTile.TileType == TileType.Fungus)
+                {
+                    if (team == playerTeam.Team)
+                    {
+                        playerMovement.SetBoost();
+                    } else if (team != playerTeam.Team && team != 0)
+                    {
+                        playerMovement.SetSlow();
+                    }
+                } else if (overlapParent.CurrentTile.TileType != TileType.Fungus)
+                {
+                    playerMovement.ResetSpeed();
+                }
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (tileTrigger == null) return;
+        
+        tileTrigger.OnPlayerStay -= OnPlayerStayTile;
     }
 }

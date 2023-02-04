@@ -51,9 +51,9 @@ MonoBehaviour:
   rockMaterial: {fileID: 2100000, guid: da3696aafefa0f34087ba577429a1ba0, type: 2}
   tileHolder: {fileID: 8449820212427205467}
   tileType: 0
-  emptyTilePrefab: {fileID: 8828789381613093024, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
+  emptyTilePrefab: {fileID: -4471347414596681077, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
     type: 3}
-  rockTilePrefab: {fileID: 799278057271455475, guid: d6839bb473da1a748b5290164a125130,
+  rockTilePrefab: {fileID: -6765527501552743231, guid: d6839bb473da1a748b5290164a125130,
     type: 3}
 --- !u!1 &8449820212427205464
 GameObject:

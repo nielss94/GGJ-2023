@@ -19,10 +19,10 @@ public class Tile : MonoBehaviour
     [Header("Tile")]
     [SerializeField] private Transform tileHolder;
     [SerializeField] private TileType tileType;
-    [SerializeField] private GameObject emptyTilePrefab;
-    [SerializeField] private GameObject rockTilePrefab;
+    [SerializeField] private WorldTile emptyTilePrefab;
+    [SerializeField] private WorldTile rockTilePrefab;
 
-    private GameObject currentTile;
+    private WorldTile currentTile;
 
     private void Start()
     {
@@ -57,9 +57,11 @@ public class Tile : MonoBehaviour
         {
             case TileType.Empty:
                 currentTile = Instantiate(emptyTilePrefab, tileHolder);
+                currentTile.rootTile = this;
                 break;
             case TileType.Rock:
                 currentTile = Instantiate(rockTilePrefab, tileHolder);
+                currentTile.rootTile = this;
                 break;
         }
     }

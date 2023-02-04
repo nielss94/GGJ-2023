@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Grid : MonoBehaviour
@@ -9,17 +11,18 @@ public class Grid : MonoBehaviour
     [SerializeField] private float xOffset;
     [SerializeField] private float yOffset;
     
-    private Tile[,] map;
+    private Tile[][] map;
     [SerializeField] private Tile tilePrefab;
 
     public void Generate()
     {
-        var levelTransform = new GameObject("New Level").transform;
+        var level = new GameObject("New Level").AddComponent<Level>();
         map = null;
-        map = new Tile[width, height];
+        map = new Tile[width][];
         
         for (int x = 0; x < width; x++)
         {
+            map[x] = new Tile[height];
             for (int y = 0; y < height; y++)
             {
                 Vector3 pos = new Vector3(x * xOffset, 0, y * yOffset);
@@ -27,11 +30,14 @@ public class Grid : MonoBehaviour
                 {
                     pos.z -= yOffset / 2;
                 }
-                var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, levelTransform);
+                var newTile = Instantiate(tilePrefab, pos, Quaternion.identity, level.transform);
                 newTile.name = $"Tile {x} {y}";
-                map[x, y] = newTile;
+                map[x][y] = newTile;
                 newTile.SetDesignTileColor();
             }
         }
+
+        level.width = width;
+        level.height = height;
     }
 }

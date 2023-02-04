@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 1742109681949637664}
   - component: {fileID: 4809755807505007630}
   - component: {fileID: 1612340421829570332}
+  - component: {fileID: 6948368104617281512}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -622,6 +623,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+--- !u!114 &6948368104617281512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765176014209247167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ee548df73ca784bb389bb0036acf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sporePickUpSounds:
+  - {fileID: 8300000, guid: 45881b17ea0b40f4db0465b55c25accb, type: 3}
+  - {fileID: 8300000, guid: 032135481f744ea4cb67c65d16ab3995, type: 3}
+  - {fileID: 8300000, guid: 8da3bc26bb63e8149bc1819fce80180f, type: 3}
 --- !u!1001 &9209463640529550824
 PrefabInstance:
   m_ObjectHideFlags: 0

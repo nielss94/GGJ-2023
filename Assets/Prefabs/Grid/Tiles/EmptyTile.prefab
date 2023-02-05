@@ -73,7 +73,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55dda82f97b14d41bfdc944f98f53dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debris: []
+  debris:
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 911c1895463f0604599492e3341c3f61, type: 3}
+  - {fileID: 4547224081786335313, guid: ba1af8241ea2a7049b6a372301dbfe26, type: 3}
+  - {fileID: 4547224081786335313, guid: ca59ce173c7cc004eb10b0048810ea2d, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
+  - {fileID: 4547224081786335313, guid: 107549c73f8ba9046a426ec1d5b1c243, type: 3}
   possibleRotations:
   - 0
   - 60

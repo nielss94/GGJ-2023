@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6132896690028012854}
   - component: {fileID: 6841841367316283447}
+  - component: {fileID: 79478580933538592}
   m_Layer: 0
   m_Name: Foodshroom1
   m_TagString: Untagged
@@ -168,6 +169,20 @@ MonoBehaviour:
   spawnRadius: 0.85
   maxSporeSpawn: 3
   smoothSporePosition: 1
+--- !u!136 &79478580933538592
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298694024485464135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.29
+  m_Height: 1.51
+  m_Direction: 1
+  m_Center: {x: -0.1, y: 0.36, z: -0.05}
 --- !u!1 &2757919785902023812
 GameObject:
   m_ObjectHideFlags: 0

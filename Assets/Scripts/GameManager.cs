@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -14,8 +15,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerSpawner playerSpawner;
     [SerializeField] private GameObject endScreen;
-    
+
     private bool gameStarted = false;
+    public bool GameStarted => gameStarted;
+    
+    [SerializeField] private WorldUIPoints worldUIPointsPrefab;
+    
     private void Awake()
     {
         if (Instance != null)
@@ -49,13 +54,19 @@ public class GameManager : MonoBehaviour
         else
         {
             gameTimeText.text = "TIME'S UP!";
-            Time.timeScale = 0;
             gameStarted = false;
             OnGameOver?.Invoke();
             endScreen.SetActive(true);
+            AudioManager.Instance.PlayEndScreenTheme();
         }
     }
 
+    public void SpawnPoints(Vector3 position, int points, int team)
+    {
+        var worldUIPoints = Instantiate(worldUIPointsPrefab, position, Quaternion.identity);
+        worldUIPoints.SetPoints(points, team);
+    }
+    
     private void SetGameTime()
     {
         gameTime -= Time.deltaTime;

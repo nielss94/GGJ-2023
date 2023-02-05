@@ -11,6 +11,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup sfxMixer;
     [SerializeField] private AudioMixerGroup musicMixer;
 
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioClip endscreenThemeClip;
+    
+    
     private void Awake()
     {
         Instance = this;
@@ -32,5 +36,12 @@ public class AudioManager : MonoBehaviour
         }
 
         return audioSourceObject;
+    }
+
+    public void PlayEndScreenTheme()
+    {
+        musicSource.clip = endscreenThemeClip;
+        musicSource.volume = .75f;
+        musicSource.Play();
     }
 }

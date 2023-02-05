@@ -1692,6 +1692,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource amount - Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 215.7607
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 129.5451
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293922, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293948, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293948, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 38.27722
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293948, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 39.714844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988907122293948, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 253.9993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 131.6949
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993698, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993725, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993725, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 45.196777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993725, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 35.072144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933988908623993725, guid: 63978f09ed440f94183166a24147b34e,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 2563558380955589346, guid: 63978f09ed440f94183166a24147b34e,
         type: 3}
       propertyPath: m_AnchorMax.x

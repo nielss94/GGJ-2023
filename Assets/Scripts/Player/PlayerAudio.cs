@@ -17,14 +17,12 @@ public class PlayerAudio : MonoBehaviour
     //list of pickup sounds
     [SerializeField] private List<AudioClip> sporePickUpSounds = new List<AudioClip>();
 
-    [SerializeField] private List<AudioClip> sporePlaceSounds = new List<AudioClip>();
     
     [SerializeField] private List<AudioClip> footstepSounds = new List<AudioClip>();
     
     [SerializeField] private AudioClip[] spraySounds = new AudioClip[3];
 
     // latest place clip
-    private AudioClip latestPlaceClip;
     private AudioClip latestMoveClip;
     
     
@@ -37,7 +35,6 @@ public class PlayerAudio : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         
         sporeGun.OnPickUpSpore += PlayPickUpSporeSound;
-        sporeGun.OnPlaceSpore += PlayPlaceSporeSound;
         sporeGun.OnSprayingChanged += OnSprayingChanged;
         sporeGun.OnPlaceSpore += OnPlaceSpore;
     }
@@ -64,7 +61,7 @@ public class PlayerAudio : MonoBehaviour
     
     private void OnPlaceSpore()
     {
-        AudioManager.Instance.PlaySound(spraySounds[2], transform.position);
+        AudioManager.Instance.PlaySound(spraySounds[2], transform.position, false, 0.6f);
     }
 
 
@@ -72,7 +69,7 @@ public class PlayerAudio : MonoBehaviour
     {
         if (change && activeLoopingSpraySound == null)
         {
-            AudioManager.Instance.PlaySound(spraySounds[0], transform.position);
+            AudioManager.Instance.PlaySound(spraySounds[0], transform.position, false, .6f);
             StartCoroutine(PlayLoopingSoundAfterSeconds(spraySounds[0].length));
         }
         else if (activeLoopingSpraySound != null)
@@ -85,7 +82,7 @@ public class PlayerAudio : MonoBehaviour
     private IEnumerator PlayLoopingSoundAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true);
+        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.6f);
     }
 
     private void PlayPickUpSporeSound()
@@ -96,23 +93,6 @@ public class PlayerAudio : MonoBehaviour
         latestSporePickUpTime = Time.time;
     }
 
-    private void PlayPlaceSporeSound()
-    {
-        if (latestPlaceClip != null)
-        {
-            // play random sound that was not used before this
-            List<AudioClip> unusedSounds = sporePlaceSounds.Where(sound => !sound.Equals(latestPlaceClip)).ToList();
-            latestPlaceClip = unusedSounds[Random.Range(0, unusedSounds.Count)];
-            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position);
-        }
-        else
-        {
-            // play random sound
-            latestPlaceClip = sporePlaceSounds[Random.Range(0, sporePlaceSounds.Count)];
-            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position, false, .6f);
-        }
-    }
-    
     private void PlayMoveSound()
     {
         if (latestMoveClip != null)

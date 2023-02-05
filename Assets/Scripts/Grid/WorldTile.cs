@@ -22,7 +22,7 @@ public class WorldTile : MonoBehaviour
     private TileTrigger tileTrigger;
     private int team = 0;
     private int fungusScore = 0;
-    
+    public int FungusScore => fungusScore;
     public int Team
     {
         get { return team; }

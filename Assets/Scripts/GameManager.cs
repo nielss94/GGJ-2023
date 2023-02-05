@@ -49,10 +49,10 @@ public class GameManager : MonoBehaviour
         else
         {
             gameTimeText.text = "TIME'S UP!";
-            Time.timeScale = 0;
             gameStarted = false;
             OnGameOver?.Invoke();
             endScreen.SetActive(true);
+            AudioManager.Instance.PlayEndScreenTheme();
         }
     }
 

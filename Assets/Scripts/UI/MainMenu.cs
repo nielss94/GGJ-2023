@@ -15,7 +15,9 @@ public class MainMenu : MonoBehaviour
     public void OnGameExit()
     {
         Application.Quit();
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
     private IEnumerator LoadLevelRoutine()

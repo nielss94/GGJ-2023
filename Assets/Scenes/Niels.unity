@@ -1551,6 +1551,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 92125860}
     m_Modifications:
+    - target: {fileID: 8449820212396450140, guid: 936010bd64eebd54ab237f407fbd2a82,
+        type: 3}
+      propertyPath: tileType
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8449820212396450141, guid: 936010bd64eebd54ab237f407fbd2a82,
         type: 3}
       propertyPath: m_Name
@@ -1611,6 +1616,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8449820212893307444, guid: 936010bd64eebd54ab237f407fbd2a82,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67587354bb5611849aaeaa7546fe8f0c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 936010bd64eebd54ab237f407fbd2a82, type: 3}
 --- !u!4 &1060966973 stripped

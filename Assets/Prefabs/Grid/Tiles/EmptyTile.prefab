@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8828789381613093027}
   - component: {fileID: 8828789381613093028}
   - component: {fileID: -4471347414596681077}
+  - component: {fileID: -7124070055080263388}
   m_Layer: 0
   m_Name: EmptyTile
   m_TagString: Untagged
@@ -60,6 +61,26 @@ MonoBehaviour:
   tileType: 0
   meshRenderer: {fileID: 2978080701841401548}
   rootTile: {fileID: 0}
+--- !u!114 &-7124070055080263388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828789381613093024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55dda82f97b14d41bfdc944f98f53dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debris: []
+  possibleRotations:
+  - 0
+  - 60
+  - 120
+  - 180
+  - 240
+  - 300
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

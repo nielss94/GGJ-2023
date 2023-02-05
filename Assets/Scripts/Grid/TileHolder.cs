@@ -18,7 +18,8 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private int rootSchroomScore = 15;
     [SerializeField] private int mushroomScore = 15;
     [SerializeField] private int carcassScore = 30;
-    [SerializeField] private TileType[] boostingTypes;
+    [SerializeField] private TileType[] boostingGeneralTypes;
+    [SerializeField] private TileType[] boostingTeamTypes;
     
     [Header("Prefabs")]
     [SerializeField] private WorldTile emptyTilePrefab;
@@ -54,11 +55,11 @@ public class TileHolder : MonoBehaviour
     
     public void SetTile(TileType tileType, int team = 0, bool gameStart = false)
     {
-        SpawnTile(tileType, gameStart);
+        SpawnTile(tileType, team, gameStart);
         currentTile.SetTeam(team);
     }
     
-    private void SpawnTile(TileType tileType, bool gameStart = false)
+    private void SpawnTile(TileType tileType, int team, bool gameStart = false)
     {
         if (currentTile != null)
         {
@@ -82,7 +83,7 @@ public class TileHolder : MonoBehaviour
                 }
                 break;
             case TileType.Fungus:
-                PlaceFungus();
+                PlaceFungus(team);
                 break;
             case TileType.Tree:
                 currentTile = Instantiate(treeTilePrefab, transform);
@@ -104,7 +105,7 @@ public class TileHolder : MonoBehaviour
         currentTile.SetRootTile(tile);
     }
 
-    private void PlaceFungus()
+    private void PlaceFungus(int team)
     {
         // Check range to carcass/root
         var overlaps = Physics.OverlapSphere(transform.position, baseTileWidth * fungusCheckRange);
@@ -119,9 +120,17 @@ public class TileHolder : MonoBehaviour
             if (tile == null) continue;
             
             // Check if no root or carcass nearby
-            if (tile.CurrentTile.TileType != TileType.Carcass && 
-                tile.CurrentTile.TileType != TileType.Root &&
-                tile.CurrentTile.TileType != TileType.RootShroom) continue;
+            if (!boostingGeneralTypes.Contains(tile.currentTile.TileType))
+            {
+                // Check if not same team
+                if (tile.currentTile.Team != team)
+                {
+                    continue;
+                } else if (!boostingTeamTypes.Contains(tile.currentTile.TileType))
+                {
+                    continue;
+                }
+            }
             
             isDead = false;
 
@@ -137,7 +146,6 @@ public class TileHolder : MonoBehaviour
             return;
         }
 
-        Debug.Log(closestRange);
         // Check if within enoki range
         if (closestRange <= baseTileWidth * enokiCheckRange + checkMargin)
         {

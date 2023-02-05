@@ -273,9 +273,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sporePrefab: {fileID: 4574826828581308034, guid: a35145ae646abd1408fbbd0a2dacd827,
     type: 3}
-  spawnCooldown: 3
-  spawnRadius: 0.8
-  maxSporeSpawn: 4
+  spawnCooldown: 4
+  spawnRadius: 0.85
+  maxSporeSpawn: 3
   smoothSporePosition: 1
 --- !u!1 &3934465012675300373
 GameObject:
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: 353bebc78cf1e2d44be85a4e3070b6fe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.42
+      value: 5.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 353bebc78cf1e2d44be85a4e3070b6fe, type: 3}
@@ -1001,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: 353bebc78cf1e2d44be85a4e3070b6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.45
+      value: -20.67
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 353bebc78cf1e2d44be85a4e3070b6fe,
         type: 3}

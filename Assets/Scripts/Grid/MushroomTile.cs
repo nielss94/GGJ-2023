@@ -10,6 +10,8 @@ public class MushroomTile : MonoBehaviour
     [SerializeField] private float fadeInSpeed;
     [SerializeField] private Ease scaleEase;
     [SerializeField] private Ease moveEase;
+    [SerializeField] private float tweenHeight = 0.35f;
+    
     
     private Mushroom currentMushroom;
     private void Start()
@@ -35,6 +37,6 @@ public class MushroomTile : MonoBehaviour
         
         currentMushroom.transform.DOScale(Vector3.one, fadeInSpeed).SetEase(scaleEase);
         // currentMushroom.transform.DOMove(currentMushroom.transform.TransformVector(Vector3.zero), fadeInSpeed).SetEase(moveEase);
-        currentMushroom.transform.DOLocalMoveY(0.35f, fadeInSpeed).SetEase(moveEase);
+        currentMushroom.transform.DOLocalMoveY(tweenHeight, fadeInSpeed).SetEase(moveEase);
     }
 }

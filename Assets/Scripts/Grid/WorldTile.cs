@@ -90,7 +90,7 @@ public class WorldTile : MonoBehaviour
 
     private void OnPlayerStayTile(GameObject player)
     {
-        if (tileType != TileType.Fungus) return;
+        if (tileType != TileType.Fungus && tileType != TileType.Enoki && tileType != TileType.RootShroom) return;
 
         if (player.TryGetComponent<PlayerMovement>(out PlayerMovement playerMovement) && 
             player.TryGetComponent<PlayerTeam>(out PlayerTeam playerTeam))
@@ -103,7 +103,9 @@ public class WorldTile : MonoBehaviour
                 var overlapParent = overlap.transform.parent.GetComponentInChildren<TileHolder>();
                 if (overlapParent == null) continue;
                 
-                if (overlapParent.CurrentTile.TileType == TileType.Fungus)
+                if (overlapParent.CurrentTile.TileType == TileType.Fungus || 
+                    overlapParent.CurrentTile.TileType == TileType.Enoki || 
+                    overlapParent.CurrentTile.TileType == TileType.RootShroom)
                 {
                     if (team == playerTeam.Team)
                     {
@@ -112,7 +114,11 @@ public class WorldTile : MonoBehaviour
                     {
                         playerMovement.SetSlow();
                     }
-                } else if (overlapParent.CurrentTile.TileType != TileType.Fungus)
+                }
+                
+                if (overlapParent.CurrentTile.TileType != TileType.Fungus && 
+                    overlapParent.CurrentTile.TileType != TileType.Enoki && 
+                    overlapParent.CurrentTile.TileType != TileType.RootShroom)
                 {
                     playerMovement.ResetSpeed();
                 }

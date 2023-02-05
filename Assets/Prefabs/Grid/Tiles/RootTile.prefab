@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4521044655068440003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8828789381613093027}
@@ -158,7 +158,6 @@ MonoBehaviour:
   team1Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
   team2Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
   tileType: 5
-  fungusScore: 0
   meshRenderer: {fileID: 2978080701841401548}
   rootTile: {fileID: 0}
 --- !u!114 &-8824189140152899593

@@ -77,8 +77,10 @@ MonoBehaviour:
     type: 3}
   team2RootShroom: {fileID: 8897601130982853116, guid: d8eb01788c7e2f8468777bf068f89449,
     type: 3}
-  fadeInSpeed: 3
-  ease: 12
+  fadeInSpeed: 2
+  scaleEase: 1
+  moveEase: 1
+  shakeStrength: 0.1
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

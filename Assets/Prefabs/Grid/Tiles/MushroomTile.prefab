@@ -77,8 +77,9 @@ MonoBehaviour:
     type: 3}
   team2mushroom: {fileID: 5177132278237267035, guid: ab2b6dfc1075a0e4682141365aec08e4,
     type: 3}
-  fadeInSpeed: 3
-  ease: 12
+  fadeInSpeed: 1
+  scaleEase: 30
+  moveEase: 30
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

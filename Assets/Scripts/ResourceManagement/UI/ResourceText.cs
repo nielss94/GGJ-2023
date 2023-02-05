@@ -35,6 +35,6 @@ public class ResourceText : MonoBehaviour
 
     private void UpdateText(int amount)
     {
-        textMesh.text = amount + "";
+        textMesh.text = $"<color=\"red\">{amount}</color> / 3";
     }
 }

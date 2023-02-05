@@ -41,9 +41,14 @@ public class WorldTile : MonoBehaviour
         tileTrigger.OnPlayerStay += OnPlayerStayTile;
     }
     
-    public void SetFungusScore(int fungusScore)
+    public void SetFungusScore(int fungusScore, int team)
     {
         this.fungusScore = fungusScore;
+
+        if (GameManager.Instance.GameStarted)
+        {
+            GameManager.Instance.SpawnPoints(transform.position, fungusScore, team);
+        }
     }
     
     private void UpdateMaterial()

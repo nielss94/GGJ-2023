@@ -137,8 +137,8 @@ MonoBehaviour:
   - {fileID: 1721373627704735958, guid: 29bde00be3175984a8df089db8071463, type: 3}
   - {fileID: 1721373627704735958, guid: c74350d143109f74fbe68e25f8c1d800, type: 3}
   - {fileID: 1721373627704735958, guid: e6c5f5dfd44d5724a8a8684893758de1, type: 3}
-  minRotation: 0
-  maxRotation: 360
+  possibleRotations:
+  - 0
 --- !u!1001 &1035318601427770164
 PrefabInstance:
   m_ObjectHideFlags: 0

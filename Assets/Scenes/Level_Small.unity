@@ -2977,6 +2977,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5476806197503986157, guid: 51c30c2e03d146b4d9c90d96adccb042,
         type: 3}
+      propertyPath: gameTime
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5476806197503986157, guid: 51c30c2e03d146b4d9c90d96adccb042,
+        type: 3}
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 871732959}

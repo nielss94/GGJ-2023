@@ -126,13 +126,40 @@ public class PlayerSporeGun : MonoBehaviour
             var tile = overlap.transform.parent.GetComponentInChildren<TileHolder>();
             if (tile != null)
             {
-                if (tile.CurrentTile.TileType != TileType.Empty) return;
-                
-                if (resourceHolder.TrySpendSpores(1))
+                if (tile.CurrentTile.TileType == TileType.Carcass)
                 {
-                    tile.SetTile(TileType.Fungus, playerTeam.Team);
-                    OnPlaceSpore?.Invoke();
-                    OnSprayingChanged?.Invoke(false);
+                    if (resourceHolder.TrySpendSpores(1))
+                    {
+                        tile.SetTile(TileType.Mushroom, playerTeam.Team);
+                        OnPlaceSpore?.Invoke();
+                        OnSprayingChanged?.Invoke(false);
+                    }
+                    
+                    return;
+                }
+
+                if (tile.CurrentTile.TileType == TileType.Root)
+                {
+                    if (resourceHolder.TrySpendSpores(1))
+                    {
+                        tile.SetTile(TileType.RootShroom, playerTeam.Team);
+                        OnPlaceSpore?.Invoke();
+                        OnSprayingChanged?.Invoke(false);
+                    }
+
+                    return;
+                }
+
+                if (tile.CurrentTile.TileType == TileType.Empty)
+                {
+                    if (resourceHolder.TrySpendSpores(1))
+                    {
+                        tile.SetTile(TileType.Fungus, playerTeam.Team);
+                        OnPlaceSpore?.Invoke();
+                        OnSprayingChanged?.Invoke(false);
+                    }
+
+                    return;
                 }
             }
         }
@@ -148,7 +175,12 @@ public class PlayerSporeGun : MonoBehaviour
             var tile = overlap.transform.parent.GetComponentInChildren<TileHolder>();
             if (tile != null)
             {
-                if (tile.CurrentTile.TileType == TileType.Empty) return true;
+                if (tile.CurrentTile.TileType == TileType.Empty ||
+                    tile.CurrentTile.TileType == TileType.Carcass ||
+                    tile.CurrentTile.TileType == TileType.Root)
+                {
+                    return true;
+                }
             }
         }
 

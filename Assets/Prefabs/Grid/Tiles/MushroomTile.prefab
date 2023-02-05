@@ -80,6 +80,7 @@ MonoBehaviour:
   fadeInSpeed: 1
   scaleEase: 30
   moveEase: 30
+  tweenHeight: 0.48
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

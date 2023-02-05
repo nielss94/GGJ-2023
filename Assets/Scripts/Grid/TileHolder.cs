@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -15,6 +16,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private int fungusScore = 1;
     [SerializeField] private int enokiScore = 3;
     [SerializeField] private int rootSchroomScore = 15;
+    [SerializeField] private int mushroomScore = 15;
     [SerializeField] private int carcassScore = 30;
     [SerializeField] private TileType[] boostingTypes;
     
@@ -33,6 +35,12 @@ public class TileHolder : MonoBehaviour
     private WorldTile currentTile;
     private Tile tile;
 
+    [SerializeField] private AudioClip mushroomSpawnClip;
+    [SerializeField] private List<AudioClip> enokiSpawnClips;
+    [SerializeField] private AudioClip rootShroomSpawnClip;
+    [SerializeField] private List<AudioClip> sporePlaceSounds = new List<AudioClip>();
+    
+    private AudioClip latestPlaceClip;
 
     public WorldTile CurrentTile
     {
@@ -44,13 +52,13 @@ public class TileHolder : MonoBehaviour
         this.tile = tile;
     }
     
-    public void SetTile(TileType tileType, int team = 0)
+    public void SetTile(TileType tileType, int team = 0, bool gameStart = false)
     {
-        SpawnTile(tileType);
+        SpawnTile(tileType, gameStart);
         currentTile.SetTeam(team);
     }
     
-    private void SpawnTile(TileType tileType)
+    private void SpawnTile(TileType tileType, bool gameStart = false)
     {
         if (currentTile != null)
         {
@@ -67,6 +75,11 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Mushroom:
                 currentTile = Instantiate(mushroomTilePrefab, transform);
+                currentTile.SetFungusScore(mushroomScore);
+                if (!gameStart)
+                {
+                    AudioManager.Instance.PlaySound(mushroomSpawnClip, transform.position);
+                }
                 break;
             case TileType.Fungus:
                 PlaceFungus();
@@ -84,6 +97,7 @@ public class TileHolder : MonoBehaviour
             case TileType.RootShroom:
                 currentTile = Instantiate(rootShroomPrefab, transform);
                 currentTile.SetFungusScore(rootSchroomScore);
+                AudioManager.Instance.PlaySound(rootShroomSpawnClip, transform.position);
                 break;
         }
         
@@ -130,14 +144,38 @@ public class TileHolder : MonoBehaviour
             // Enoki
             currentTile = Instantiate(enokiPrefab, transform);
             currentTile.SetFungusScore(enokiScore);
+            
+            // play random enoki spawn clip
+            var enokiSpawnClip = enokiSpawnClips[Random.Range(0, enokiSpawnClips.Count)];
+            AudioManager.Instance.PlaySound(enokiSpawnClip, transform.position);
         }
         else
         {
             // Fungus
             currentTile = Instantiate(fungusTilePrefab, transform);
             currentTile.SetFungusScore(fungusScore);
+            PlayPlaceSporeSound();
         }
     }
+    
+    
+    private void PlayPlaceSporeSound()
+    {
+        if (latestPlaceClip != null)
+        {
+            // play random sound that was not used before this
+            List<AudioClip> unusedSounds = sporePlaceSounds.Where(sound => !sound.Equals(latestPlaceClip)).ToList();
+            latestPlaceClip = unusedSounds[Random.Range(0, unusedSounds.Count)];
+            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position);
+        }
+        else
+        {
+            // play random sound
+            latestPlaceClip = sporePlaceSounds[Random.Range(0, sporePlaceSounds.Count)];
+            AudioManager.Instance.PlaySound(latestPlaceClip, transform.position, false, .6f);
+        }
+    }
+
 }
 
 

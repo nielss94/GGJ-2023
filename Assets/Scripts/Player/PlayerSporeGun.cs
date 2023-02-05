@@ -28,6 +28,8 @@ public class PlayerSporeGun : MonoBehaviour
     private bool startPlaceTimer = false;
     private float placeTimer = 0;
 
+    private bool gameOver = false;
+    
     public float PlaceTimer
     {
         get { return placeTimer; }
@@ -45,6 +47,8 @@ public class PlayerSporeGun : MonoBehaviour
 
         
         playerTeam = GetComponent<PlayerTeam>();
+        
+        GameManager.Instance.OnGameOver += OnGameOver;
     }
 
     private void Start()
@@ -74,6 +78,8 @@ public class PlayerSporeGun : MonoBehaviour
 
     private void Update()
     {
+        if (gameOver) return;
+        
         if (startPlaceTimer && resourceHolder.CanSpendSpores(1))
         {
             placeTimer += Time.deltaTime;
@@ -91,6 +97,11 @@ public class PlayerSporeGun : MonoBehaviour
         }
     }
 
+    private void OnGameOver()
+    {
+        gameOver = true;
+    }
+    
     private void ResetPlacing()
     {
         playerMovement.AllowedToMove = true;

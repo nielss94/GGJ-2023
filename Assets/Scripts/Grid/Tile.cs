@@ -44,7 +44,7 @@ public class Tile : MonoBehaviour
         designTile.GetComponent<MeshRenderer>().enabled = false;
         
         tileHolder.Init(this);
-        tileHolder.SetTile(tileType, team);
+        tileHolder.SetTile(tileType, team, true);
     }
 
     private void OnValidate()

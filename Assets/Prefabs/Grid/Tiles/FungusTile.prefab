@@ -130,8 +130,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Particles: {fileID: 3050220553820681130}
   team2Particles: {fileID: 9182576695444534660}
-  fadeInSpeed: 5
+  growSpeed: 6
+  deathSpeed: 1
   ease: 1
+  isDead: 0
+  pointLight: {fileID: 0}
   renderer: {fileID: 5262048381434784057}
 --- !u!1001 &6356505619954463897
 PrefabInstance:

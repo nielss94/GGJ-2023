@@ -130,7 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Particles: {fileID: 0}
   team2Particles: {fileID: 0}
-  fadeInSpeed: 5
+  growSpeed: 2
+  deathSpeed: 4
   ease: 1
   isDead: 1
   pointLight: {fileID: 1053567802445800657}

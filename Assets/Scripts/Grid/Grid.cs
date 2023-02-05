@@ -21,6 +21,7 @@ public class Grid : MonoBehaviour
 
     public void Generate()
     {
+        #if UNITY_EDITOR
         var level = new GameObject("New Level").AddComponent<Level>();
         map = null;
         map = new Tile[width][];
@@ -50,5 +51,6 @@ public class Grid : MonoBehaviour
 
         level.width = width;
         level.height = height;
+        #endif
     }
 }

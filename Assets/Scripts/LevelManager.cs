@@ -35,7 +35,10 @@ public class LevelManager : MonoBehaviour
 
         if (currentLevelIndex < levels.Length)
         {
-            StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
+            if (currentLoadedLevelName == null || currentLoadedLevelName.Length > 0)
+            {
+                StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
+            }
             StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex]));
             currentLevelIndex++;
         }
@@ -54,6 +57,10 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+        
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(nextLevelName));
+        currentLoadedLevelName = nextLevelName;
+        if (gameManager == null) gameManager = GameManager.Instance;
     }
     
     public IEnumerator UnloadLevelRoutine(string levelName)

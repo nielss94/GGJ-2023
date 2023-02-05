@@ -128,79 +128,6 @@ MonoBehaviour:
   tileHolder: {fileID: 6792622797743160167}
   tileType: 0
   team: 0
---- !u!1 &8449820212427205464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8449820212427205467}
-  - component: {fileID: 6792622797743160167}
-  m_Layer: 0
-  m_Name: TileHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8449820212427205467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449820212427205464}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8449820212396450143}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6792622797743160167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449820212427205464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a35057c0735dcc47b6509fcaddcf2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseTileWidth: 1.73
-  enokiCheckRange: 1
-  fungusCheckRange: 2
-  checkMargin: 0.5
-  deadScore: 0
-  fungusScore: 1
-  enokiScore: 3
-  rootSchroomScore: 15
-  carcassScore: 30
-  emptyTilePrefab: {fileID: -4471347414596681077, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
-    type: 3}
-  rockTilePrefab: {fileID: -6765527501552743231, guid: d6839bb473da1a748b5290164a125130,
-    type: 3}
-  mushroomTilePrefab: {fileID: -4471347414596681077, guid: 0eb72ff7def73cd429e0f1c95e72d80d,
-    type: 3}
-  deadTilePrefab: {fileID: -4471347414596681077, guid: 0f978680e837fd8428f3752d2490db9a,
-    type: 3}
-  fungusTilePrefab: {fileID: -6765527501552743231, guid: 8655f3b9948fdd34eac08f702d0cb928,
-    type: 3}
-  enokiPrefab: {fileID: -4471347414596681077, guid: 818f31a453de7aa4eafedbd6711d072c,
-    type: 3}
-  treeTilePrefab: {fileID: -6765527501552743231, guid: ed1a21e3b90ac624c924a087746a28e3,
-    type: 3}
-  rootTilePrefab: {fileID: -4471347414596681077, guid: 578b48006848c4848a3ec9c164482f6a,
-    type: 3}
-  carcassTilePrefab: {fileID: -4471347414596681077, guid: fe991299daebb84469ec1cbc09c9479f,
-    type: 3}
-  rootShroomPrefab: {fileID: -4471347414596681077, guid: 55f2d42c1de75f34cbd4d962fdabb6d8,
-    type: 3}
 --- !u!1 &8449820212893307443
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,3 +211,90 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &6230003148875293195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8449820212396450143}
+    m_Modifications:
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537391833569642835, guid: b12a3ba161fd920408c058f63500d96e,
+        type: 3}
+      propertyPath: m_Name
+      value: TileHolder
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b12a3ba161fd920408c058f63500d96e, type: 3}
+--- !u!114 &6792622797743160167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 590346111105210732, guid: b12a3ba161fd920408c058f63500d96e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6230003148875293195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a35057c0735dcc47b6509fcaddcf2a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8449820212427205467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2537391833569642832, guid: b12a3ba161fd920408c058f63500d96e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6230003148875293195}
+  m_PrefabAsset: {fileID: 0}

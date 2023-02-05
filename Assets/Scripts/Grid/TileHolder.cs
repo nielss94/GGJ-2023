@@ -16,6 +16,8 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private int enokiScore = 3;
     [SerializeField] private int rootSchroomScore = 15;
     [SerializeField] private int carcassScore = 30;
+    [SerializeField] private TileType[] boostingTypes;
+    
     [Header("Prefabs")]
     [SerializeField] private WorldTile emptyTilePrefab;
     [SerializeField] private WorldTile rockTilePrefab;
@@ -104,7 +106,8 @@ public class TileHolder : MonoBehaviour
             
             // Check if no root or carcass nearby
             if (tile.CurrentTile.TileType != TileType.Carcass && 
-                tile.CurrentTile.TileType != TileType.Root) continue;
+                tile.CurrentTile.TileType != TileType.Root &&
+                tile.CurrentTile.TileType != TileType.RootShroom) continue;
             
             isDead = false;
 

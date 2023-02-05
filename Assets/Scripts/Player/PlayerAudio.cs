@@ -61,7 +61,7 @@ public class PlayerAudio : MonoBehaviour
     
     private void OnPlaceSpore()
     {
-        AudioManager.Instance.PlaySound(spraySounds[2], transform.position, false, 0.6f);
+        AudioManager.Instance.PlaySound(spraySounds[2], transform.position, false, 0.45f);
     }
 
 
@@ -69,7 +69,7 @@ public class PlayerAudio : MonoBehaviour
     {
         if (change && activeLoopingSpraySound == null)
         {
-            AudioManager.Instance.PlaySound(spraySounds[0], transform.position, false, .6f);
+            AudioManager.Instance.PlaySound(spraySounds[0], transform.position, false, .45f);
             StartCoroutine(PlayLoopingSoundAfterSeconds(spraySounds[0].length));
         }
         else if (activeLoopingSpraySound != null)
@@ -82,7 +82,7 @@ public class PlayerAudio : MonoBehaviour
     private IEnumerator PlayLoopingSoundAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.6f);
+        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.45f);
     }
 
     private void PlayPickUpSporeSound()

@@ -9,6 +9,6 @@ public class TreeTile : MonoBehaviour
     [SerializeField] private float[] possibleRotations;
     private void Start()
     {
-        Instantiate(trees[Random.Range(0, trees.Count)], transform.position, Quaternion.Euler(0,0,possibleRotations[Random.Range(0, possibleRotations.Length)]), transform);
+        Instantiate(trees[Random.Range(0, trees.Count)], transform.position, Quaternion.Euler(0,possibleRotations[Random.Range(0, possibleRotations.Length)], 0), transform);
     }
 }

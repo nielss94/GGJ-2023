@@ -32,6 +32,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile rootTilePrefab;
     [SerializeField] private WorldTile carcassTilePrefab;
     [SerializeField] private WorldTile rootShroomPrefab;
+    [SerializeField] private WorldTile waterPrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -99,6 +100,9 @@ public class TileHolder : MonoBehaviour
                 currentTile = Instantiate(rootShroomPrefab, transform);
                 currentTile.SetFungusScore(rootSchroomScore);
                 AudioManager.Instance.PlaySound(rootShroomSpawnClip, transform.position);
+                break;
+            case TileType.Water:
+                currentTile = Instantiate(waterPrefab, transform);
                 break;
         }
         

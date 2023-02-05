@@ -52,6 +52,7 @@ MonoBehaviour:
   fungusScore: 1
   enokiScore: 3
   rootSchroomScore: 15
+  mushroomScore: 15
   carcassScore: 30
   boostingGeneralTypes: 0600000005000000
   boostingTeamTypes: 0700000002000000
@@ -74,6 +75,8 @@ MonoBehaviour:
   carcassTilePrefab: {fileID: -4471347414596681077, guid: fe991299daebb84469ec1cbc09c9479f,
     type: 3}
   rootShroomPrefab: {fileID: -4471347414596681077, guid: 55f2d42c1de75f34cbd4d962fdabb6d8,
+    type: 3}
+  waterPrefab: {fileID: -6765527501552743231, guid: 8434a62023fa9084ba8e4a405ca65b94,
     type: 3}
   mushroomSpawnClip: {fileID: 8300000, guid: dd87854f99b8dd34cb3a0f1ea8a9e6c7, type: 3}
   enokiSpawnClips:

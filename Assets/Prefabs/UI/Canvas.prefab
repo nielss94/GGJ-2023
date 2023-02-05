@@ -202,8 +202,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59e896e96f55e6b43aac3902b2deca79, type: 2}
+  m_sharedMaterial: {fileID: 7587376106481736984, guid: 59e896e96f55e6b43aac3902b2deca79,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -227,8 +228,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1967,11 +1968,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: Press Any To Join - Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 2410830364015920397, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410830364015920397, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 59e896e96f55e6b43aac3902b2deca79,
+        type: 2}
+    - target: {fileID: 2410830364015920397, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410830364015920397, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7587376106481736984, guid: 59e896e96f55e6b43aac3902b2deca79,
+        type: 2}
+    - target: {fileID: 2410830364015920398, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410830364015920398, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 260
+      objectReference: {fileID: 0}
     - target: {fileID: 2410830364015920398, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 2638069241083081114, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638069241083081114, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 0.18066406
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638069241083081114, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 59e896e96f55e6b43aac3902b2deca79,
+        type: 2}
+    - target: {fileID: 2638069241083081114, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638069241083081114, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7587376106481736984, guid: 59e896e96f55e6b43aac3902b2deca79,
+        type: 2}
     - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1986,6 +2046,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
         type: 3}

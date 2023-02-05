@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
     private IEnumerator LoadLevelRoutine()
     {
         // TODO: load management scene
-        var progress = SceneManager.LoadSceneAsync("Niels", LoadSceneMode.Single);
+        var progress = SceneManager.LoadSceneAsync("BaseScene", LoadSceneMode.Single);
 
         while (!progress.isDone)
         {

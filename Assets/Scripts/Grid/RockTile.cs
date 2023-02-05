@@ -8,6 +8,8 @@ public class RockTile : MonoBehaviour
     [SerializeField] private float[] possibleRotations;
     private void Start()
     {
-        Instantiate(rocks[Random.Range(0, rocks.Count)], transform.position, Quaternion.Euler(0,possibleRotations[Random.Range(0, possibleRotations.Length)], 0), transform);
+        var rock = rocks[Random.Range(0, rocks.Count)];
+        var instantiated = Instantiate(rock, transform);
+        instantiated.transform.localEulerAngles = new Vector3(-90, 0, possibleRotations[Random.Range(0, possibleRotations.Length)]);
     }
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2537391833569642835}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79,6 +79,8 @@ MonoBehaviour:
   waterPrefab: {fileID: -6765527501552743231, guid: 8434a62023fa9084ba8e4a405ca65b94,
     type: 3}
   foodShroomTilePrefab: {fileID: -4471347414596681077, guid: 194c126dd028d2943ab2c98e726ff385,
+    type: 3}
+  bridgeTilePrefab: {fileID: -6765527501552743231, guid: 7b0579f24b6c8f543b8075e355dd3cf8,
     type: 3}
   mushroomSpawnClip: {fileID: 8300000, guid: dd87854f99b8dd34cb3a0f1ea8a9e6c7, type: 3}
   enokiSpawnClips:

@@ -127,6 +127,7 @@ MonoBehaviour:
   enokiMaterial: {fileID: 2100000, guid: 59d90e3051a9c164fa124d9257d3087f, type: 2}
   waterMaterial: {fileID: 2100000, guid: 67587354bb5611849aaeaa7546fe8f0c, type: 2}
   foodShroomMaterial: {fileID: 2100000, guid: 2f955b97ee9c5e14fbd0e15935a4a08e, type: 2}
+  bridgeMaterial: {fileID: 2100000, guid: 282205e5a6311ad4896c42b6ced4a4aa, type: 2}
   tileHolder: {fileID: 6792622797743160167}
   tileType: 0
   team: 0

@@ -176,7 +176,7 @@ Material:
     - _Anisotropy: 0
     - _BlendMode: 0
     - _Bulge_Power: 0.04
-    - _Bulge_Width: 4
+    - _Bulge_Width: 8
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
     - _Contract: -1.92

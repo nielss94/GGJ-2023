@@ -141,7 +141,7 @@ public class PlayerSporeGun : MonoBehaviour
                 {
                     if (resourceHolder.TrySpendSpores(1))
                     {
-                        tile.SetTile(TileType.Mushroom, playerTeam.Team);
+                        tile.SetTile(TileType.FoodShroom, playerTeam.Team);
                         OnPlaceSpore?.Invoke();
                         OnSprayingChanged?.Invoke(false);
                     }

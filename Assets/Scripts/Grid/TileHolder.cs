@@ -33,6 +33,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile carcassTilePrefab;
     [SerializeField] private WorldTile rootShroomPrefab;
     [SerializeField] private WorldTile waterPrefab;
+    [SerializeField] private WorldTile foodShroomTilePrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -77,7 +78,15 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Mushroom:
                 currentTile = Instantiate(mushroomTilePrefab, transform);
-                currentTile.SetFungusScore(mushroomScore);
+                currentTile.SetFungusScore(mushroomScore, team);
+                if (!gameStart)
+                {
+                    AudioManager.Instance.PlaySound(mushroomSpawnClip, transform.position);
+                }
+                break;
+            case TileType.FoodShroom:
+                currentTile = Instantiate(foodShroomTilePrefab, transform);
+                currentTile.SetFungusScore(mushroomScore, team);
                 if (!gameStart)
                 {
                     AudioManager.Instance.PlaySound(mushroomSpawnClip, transform.position);
@@ -94,11 +103,11 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Carcass:
                 currentTile = Instantiate(carcassTilePrefab, transform);
-                currentTile.SetFungusScore(carcassScore);
+                currentTile.SetFungusScore(carcassScore, team);
                 break;
             case TileType.RootShroom:
                 currentTile = Instantiate(rootShroomPrefab, transform);
-                currentTile.SetFungusScore(rootSchroomScore);
+                currentTile.SetFungusScore(rootSchroomScore, team);
                 AudioManager.Instance.PlaySound(rootShroomSpawnClip, transform.position);
                 break;
             case TileType.Water:
@@ -146,7 +155,7 @@ public class TileHolder : MonoBehaviour
         {
             // Dead fungus
             currentTile = Instantiate(deadTilePrefab, transform);
-            currentTile.SetFungusScore(deadScore);
+            currentTile.SetFungusScore(deadScore, team);
             return;
         }
 
@@ -155,7 +164,7 @@ public class TileHolder : MonoBehaviour
         {
             // Enoki
             currentTile = Instantiate(enokiPrefab, transform);
-            currentTile.SetFungusScore(enokiScore);
+            currentTile.SetFungusScore(enokiScore, team);
             
             // play random enoki spawn clip
             var enokiSpawnClip = enokiSpawnClips[Random.Range(0, enokiSpawnClips.Count)];
@@ -165,7 +174,7 @@ public class TileHolder : MonoBehaviour
         {
             // Fungus
             currentTile = Instantiate(fungusTilePrefab, transform);
-            currentTile.SetFungusScore(fungusScore);
+            currentTile.SetFungusScore(fungusScore, team);
             PlayPlaceSporeSound();
         }
     }

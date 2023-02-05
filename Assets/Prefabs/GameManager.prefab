@@ -48,3 +48,5 @@ MonoBehaviour:
   gameTimeText: {fileID: 0}
   playerSpawner: {fileID: 0}
   endScreen: {fileID: 0}
+  worldUIPointsPrefab: {fileID: 1643340466521194499, guid: 7f80924ced0608245bee201a6cc10413,
+    type: 3}

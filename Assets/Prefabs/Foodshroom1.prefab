@@ -164,9 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sporePrefab: {fileID: 4574826828581308034, guid: 9ddcfa7d793083941b40a359d728b6eb,
     type: 3}
-  spawnCooldown: 3
-  spawnRadius: 0.8
-  maxSporeSpawn: 4
+  spawnCooldown: 4
+  spawnRadius: 0.85
+  maxSporeSpawn: 3
   smoothSporePosition: 1
 --- !u!1 &2757919785902023812
 GameObject:

@@ -100,13 +100,13 @@ public class PlayerAudio : MonoBehaviour
             // play random sound that was not used before this
             List<AudioClip> unusedSounds = footstepSounds.Where(sound => !sound.Equals(latestMoveClip)).ToList();
             latestMoveClip = unusedSounds[Random.Range(0, unusedSounds.Count)];
-            AudioManager.Instance.PlaySound(latestMoveClip, transform.position);
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .4f);
         }
         else
         {
             // play random sound
             latestMoveClip = footstepSounds[Random.Range(0, footstepSounds.Count)];
-            AudioManager.Instance.PlaySound(latestMoveClip, transform.position);
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .4f);
         }
     }
     

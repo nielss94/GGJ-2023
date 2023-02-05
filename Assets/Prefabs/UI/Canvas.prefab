@@ -1017,10 +1017,10 @@ RectTransform:
   m_Father: {fileID: 597629672899737675}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 489.5879}
-  m_SizeDelta: {x: 919.0726, y: -979.1757}
+  m_AnchoredPosition: {x: 0, y: -50.41211}
+  m_SizeDelta: {x: 919.0726, y: 100.82428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &597629672874025663
 CanvasRenderer:
@@ -1966,6 +1966,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Press Any To Join - Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410830364015920398, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118900511154944869, guid: f7eda8c2fc0784c4b895c4fcc76dbb57,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7eda8c2fc0784c4b895c4fcc76dbb57, type: 3}

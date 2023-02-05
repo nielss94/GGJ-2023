@@ -53,7 +53,8 @@ MonoBehaviour:
   enokiScore: 3
   rootSchroomScore: 15
   carcassScore: 30
-  boostingTypes: 05000000060000000700000002000000
+  boostingGeneralTypes: 0600000005000000
+  boostingTeamTypes: 0700000002000000
   emptyTilePrefab: {fileID: -4471347414596681077, guid: 5e55a3602b5da3c4bbd5bf70473a9b48,
     type: 3}
   rockTilePrefab: {fileID: -6765527501552743231, guid: d6839bb473da1a748b5290164a125130,

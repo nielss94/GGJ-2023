@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.40054387, g: 0.5999022, b: 1, a: 1}
+  m_IndirectSpecularColor: {r: 0.40042275, g: 0.5997722, b: 1, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3623,6 +3623,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2458558381647690064, guid: ac98ae5cc6ff0ab439af4c8da928b3c0,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3064.3638
+      objectReference: {fileID: 0}
     - target: {fileID: 5765176014209247163, guid: ac98ae5cc6ff0ab439af4c8da928b3c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -3971,17 +3976,17 @@ PrefabInstance:
     - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -249.13197
       objectReference: {fileID: 0}
     - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2492469479174014428, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -249.13197
       objectReference: {fileID: 0}
     - target: {fileID: 3266660000238584533, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
@@ -4046,17 +4051,17 @@ PrefabInstance:
     - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.x
-      value: 0
+      value: -83.04399
       objectReference: {fileID: 0}
     - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8373962089886029927, guid: fadcbabccdfefc5439296538a965d327,
         type: 3}
       propertyPath: parameters.textureOffset.z
-      value: 0
+      value: -83.04399
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fadcbabccdfefc5439296538a965d327, type: 3}

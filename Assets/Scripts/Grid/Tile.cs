@@ -17,7 +17,8 @@ public enum TileType
     Enoki,
     Dead,
     Water,
-    FoodShroom
+    FoodShroom,
+    Bridge
 }
 
 public class Tile : MonoBehaviour
@@ -35,6 +36,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material enokiMaterial;
     [SerializeField] private Material waterMaterial;
     [SerializeField] private Material foodShroomMaterial;
+    [SerializeField] private Material bridgeMaterial;
     
     [Header("Tile")]
     [SerializeField] private TileHolder tileHolder;
@@ -95,6 +97,9 @@ public class Tile : MonoBehaviour
                 break;
             case TileType.FoodShroom:
                 designTile.GetComponent<MeshRenderer>().material = foodShroomMaterial;
+                break;
+            case TileType.Bridge:
+                designTile.GetComponent<MeshRenderer>().material = bridgeMaterial;
                 break;
         }
     }

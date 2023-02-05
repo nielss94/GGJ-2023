@@ -78,6 +78,8 @@ MonoBehaviour:
     type: 3}
   waterPrefab: {fileID: -6765527501552743231, guid: 8434a62023fa9084ba8e4a405ca65b94,
     type: 3}
+  foodShroomTilePrefab: {fileID: -4471347414596681077, guid: 194c126dd028d2943ab2c98e726ff385,
+    type: 3}
   mushroomSpawnClip: {fileID: 8300000, guid: dd87854f99b8dd34cb3a0f1ea8a9e6c7, type: 3}
   enokiSpawnClips:
   - {fileID: 8300000, guid: 9f93fa190ea34264dbb4246031dd68d9, type: 3}

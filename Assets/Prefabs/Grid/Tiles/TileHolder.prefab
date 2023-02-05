@@ -52,6 +52,7 @@ MonoBehaviour:
   fungusScore: 1
   enokiScore: 3
   rootSchroomScore: 15
+  mushroomScore: 15
   carcassScore: 30
   boostingGeneralTypes: 0600000005000000
   boostingTeamTypes: 0700000002000000
@@ -75,3 +76,20 @@ MonoBehaviour:
     type: 3}
   rootShroomPrefab: {fileID: -4471347414596681077, guid: 55f2d42c1de75f34cbd4d962fdabb6d8,
     type: 3}
+  waterPrefab: {fileID: -6765527501552743231, guid: 8434a62023fa9084ba8e4a405ca65b94,
+    type: 3}
+  mushroomSpawnClip: {fileID: 8300000, guid: dd87854f99b8dd34cb3a0f1ea8a9e6c7, type: 3}
+  enokiSpawnClips:
+  - {fileID: 8300000, guid: 9f93fa190ea34264dbb4246031dd68d9, type: 3}
+  - {fileID: 8300000, guid: 60e8c09cb89c2ea44937205c46b895a7, type: 3}
+  - {fileID: 8300000, guid: 43a26380612847c4082f758103acce90, type: 3}
+  - {fileID: 8300000, guid: 7da28d868ea159643b85ff9c59ac1b0e, type: 3}
+  - {fileID: 8300000, guid: a754bfbfa42ad804f97e23a538316d82, type: 3}
+  rootShroomSpawnClip: {fileID: 8300000, guid: 409d1f43d2fac454b8e367dbcd7f2ac7, type: 3}
+  sporePlaceSounds:
+  - {fileID: 8300000, guid: 72090bd200e45274a992f8f50788e3a0, type: 3}
+  - {fileID: 8300000, guid: d8749a3555f2f6f41a50c6ce0835d1e6, type: 3}
+  - {fileID: 8300000, guid: 95d524a14330b7744bcd4265a97ce589, type: 3}
+  - {fileID: 8300000, guid: cd8001efeff9ae14591bdcda066af001, type: 3}
+  - {fileID: 8300000, guid: fc6d64184d4683b4eb0e7c57d3e2767f, type: 3}
+  - {fileID: 8300000, guid: 4993960e02436ca4c91c6238ba3e3588, type: 3}

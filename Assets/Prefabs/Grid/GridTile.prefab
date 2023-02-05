@@ -125,6 +125,7 @@ MonoBehaviour:
   carcassMaterial: {fileID: 2100000, guid: 87f20179f38fb4549b0e075c1b170167, type: 2}
   rootShroomMaterial: {fileID: 2100000, guid: 8de38e5eed8a62b45a3b5cd0bf08dabf, type: 2}
   enokiMaterial: {fileID: 2100000, guid: 59d90e3051a9c164fa124d9257d3087f, type: 2}
+  waterMaterial: {fileID: 2100000, guid: 67587354bb5611849aaeaa7546fe8f0c, type: 2}
   tileHolder: {fileID: 6792622797743160167}
   tileType: 0
   team: 0

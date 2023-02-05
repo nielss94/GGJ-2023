@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
    }
    private bool allowedToMove = false;
    private float modifiedSpeed;
-
+   private bool gameOver = false;
    private void Awake()
    {
       playerSpawner = FindObjectOfType<PlayerSpawner>();
@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
       moveAction = playerInput.actions["move"];
       modifiedSpeed = moveSpeed;
       
+      GameManager.Instance.OnGameOver += OnGameOver;
       playerInput = GetComponent<PlayerInput>();
    }
 
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
    void Update()
    {
-      if (!playerSpawner.AllPlayersSpawned)
+      if (!playerSpawner.AllPlayersSpawned && !gameOver)
       {
          return;
       }
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
    private void FixedUpdate()
    {
-      if (!playerSpawner.AllPlayersSpawned)
+      if (!playerSpawner.AllPlayersSpawned && !gameOver)
       {
          return;
       }
@@ -83,6 +84,12 @@ public class PlayerMovement : MonoBehaviour
       
    }
 
+
+   private void OnGameOver()
+   {
+      gameOver = true;
+   }
+   
    public void SetBoost()
    {
       modifiedSpeed = moveSpeed * boostModifier;

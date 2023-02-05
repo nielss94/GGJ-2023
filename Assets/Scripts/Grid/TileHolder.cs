@@ -33,6 +33,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile carcassTilePrefab;
     [SerializeField] private WorldTile rootShroomPrefab;
     [SerializeField] private WorldTile waterPrefab;
+    [SerializeField] private WorldTile foodShroomTilePrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -77,6 +78,14 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Mushroom:
                 currentTile = Instantiate(mushroomTilePrefab, transform);
+                currentTile.SetFungusScore(mushroomScore, team);
+                if (!gameStart)
+                {
+                    AudioManager.Instance.PlaySound(mushroomSpawnClip, transform.position);
+                }
+                break;
+            case TileType.FoodShroom:
+                currentTile = Instantiate(foodShroomTilePrefab, transform);
                 currentTile.SetFungusScore(mushroomScore, team);
                 if (!gameStart)
                 {

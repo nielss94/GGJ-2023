@@ -51,6 +51,8 @@ MonoBehaviour:
     type: 2}
   musicMixer: {fileID: 5665569885856566865, guid: 3e5f4dac10f805d4ebf4fd249887b14a,
     type: 2}
+  musicSource: {fileID: 45703980}
+  endscreenThemeClip: {fileID: 8300000, guid: 0e587e52b5ea89b4984174fd1f5c9022, type: 3}
 --- !u!82 &45703980
 AudioSource:
   m_ObjectHideFlags: 0

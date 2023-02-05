@@ -34,6 +34,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile rootShroomPrefab;
     [SerializeField] private WorldTile waterPrefab;
     [SerializeField] private WorldTile foodShroomTilePrefab;
+    [SerializeField] private WorldTile bridgeTilePrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -112,6 +113,9 @@ public class TileHolder : MonoBehaviour
                 break;
             case TileType.Water:
                 currentTile = Instantiate(waterPrefab, transform);
+                break;
+            case TileType.Bridge:
+                currentTile = Instantiate(bridgeTilePrefab, transform);
                 break;
         }
         

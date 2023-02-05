@@ -37,10 +37,10 @@ public class PlayerSpawner : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
+        Debug.Log("Player joined");
         var playerNumber = playerInput.playerIndex + 1;
         var playerGameObject = playerInput.gameObject;
-        
-        
+
         SetPlayerTeam(playerGameObject, playerNumber);
         SetPlayerMaterial(playerGameObject, playerNumber);
         SetPlayerPosition(playerGameObject, playerNumber);

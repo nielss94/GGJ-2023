@@ -10,12 +10,13 @@ using UnityEngine.SceneManagement;
 public class EndScreen : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuButton;
+    [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private TextMeshProUGUI team1ScoreText;
     [SerializeField] private TextMeshProUGUI team2ScoreText;
     
     private void OnEnable()
     {
-        EventSystem.current.SetSelectedGameObject(mainMenuButton);
+        EventSystem.current.SetSelectedGameObject(nextLevelButton);
         // show scores
         team1ScoreText.text = "Loading...";
         team2ScoreText.text = "Loading...";
@@ -26,6 +27,11 @@ public class EndScreen : MonoBehaviour
     public void OnMainMenuButtonClicked()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnNextLevelButtonClicked()
+    {
+        LevelManager.Instance.LoadNextLevel();
     }
 
     private void ShowScores()

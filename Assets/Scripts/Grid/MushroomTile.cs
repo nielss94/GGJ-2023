@@ -14,7 +14,7 @@ public class MushroomTile : MonoBehaviour
     private void Start()
     {
         SetTeam(GetComponent<WorldTile>().Team);
-        
+        currentMushroom.StartSpawning();
     }
 
     public void SetTeam(int team)

@@ -29,7 +29,7 @@ public class Mushroom : MonoBehaviour
 
     private void Start()
     {
-        playerSpawner.OnAllPlayersSpawned += () => spawningStarted = true;
+        playerSpawner.OnAllPlayersSpawned += StartSpawning;
         team = GetComponentInParent<WorldTile>().Team;
     }
 
@@ -39,6 +39,11 @@ public class Mushroom : MonoBehaviour
         {
             StartCoroutine(SpawnSpore());
         }
+    }
+
+    public void StartSpawning()
+    {
+        spawningStarted = true;
     }
 
     public void TakeSpore(GameObject spore, bool destroySpore = false)

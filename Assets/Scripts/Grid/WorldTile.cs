@@ -21,6 +21,7 @@ public class WorldTile : MonoBehaviour
     public Tile rootTile;
     private TileTrigger tileTrigger;
     private int team = 0;
+    private int fungusScore = 0;
     
     public int Team
     {
@@ -38,6 +39,11 @@ public class WorldTile : MonoBehaviour
         this.rootTile = rootTile;
         tileTrigger = rootTile.GetComponentInChildren<TileTrigger>();
         tileTrigger.OnPlayerStay += OnPlayerStayTile;
+    }
+    
+    public void SetFungusScore(int fungusScore)
+    {
+        this.fungusScore = fungusScore;
     }
     
     private void UpdateMaterial()

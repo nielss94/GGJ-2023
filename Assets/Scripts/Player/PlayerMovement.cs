@@ -81,9 +81,7 @@ public class PlayerMovement : MonoBehaviour
          var direction = cameraForward * moveDirection.y + cameraRight * moveDirection.x;
          model.transform.rotation = Quaternion.Slerp(model.transform.rotation, Quaternion.LookRotation(direction), 0.15f);
       }
-      
    }
-
 
    private void OnGameOver()
    {

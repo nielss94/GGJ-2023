@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
         if (currentLevelIndex < levels.Length)
         {
-            if (currentLoadedLevelName == null || currentLoadedLevelName.Length > 0)
+            if (currentLoadedLevelName != null && currentLoadedLevelName.Length > 0)
             {
                 StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
             }

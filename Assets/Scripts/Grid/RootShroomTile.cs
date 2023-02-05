@@ -14,12 +14,10 @@ public class RootShroomTile : MonoBehaviour
     [SerializeField] private float shakeStrength = 0.1f;
 
     private GameObject currentRootShroom;
-    private Vector3 initialPosition;
     private void Start()
     {
         var worldTile = GetComponent<WorldTile>();
         SetTeam(worldTile.Team);
-        initialPosition = worldTile.rootTile.transform.position;
         currentRootShroom.transform.localScale = Vector3.one * 0.5f;
         currentRootShroom.transform.localPosition = Vector3.down * 0.5f;
     }

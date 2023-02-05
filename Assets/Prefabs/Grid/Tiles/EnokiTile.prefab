@@ -55,12 +55,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4320abee745145a49a8e6e49920ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unassignedMaterial: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
-  team1Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
-  team2Material: {fileID: 2100000, guid: 8f2288b2d9589fc42864b2d035e7ac25, type: 2}
+  unassignedMaterial: {fileID: 2100000, guid: 59d90e3051a9c164fa124d9257d3087f, type: 2}
+  team1Material: {fileID: 2100000, guid: 4a258637afa25534589b316820167037, type: 2}
+  team2Material: {fileID: 2100000, guid: aaa4964c37966414690c675777b61729, type: 2}
   tileType: 8
-  fungusScore: 0
-  meshRenderer: {fileID: 2978080701841401548}
+  meshRenderer: {fileID: 0}
   rootTile: {fileID: 0}
 --- !u!114 &8394608526675991182
 MonoBehaviour:
@@ -74,6 +73,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759c2212e19359a45ae33492507d5f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team1Enoki: {fileID: 8324128611840406823, guid: 5dccce5feeede74479558e0619d26315,
+    type: 3}
+  team2Enoki: {fileID: 8298992205779738351, guid: a3968c91923210943b7fa1acbde0cb80,
+    type: 3}
+  fadeInSpeed: 2
+  scaleEase: 1
+  moveEase: 1
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,12 +154,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478403e522fe3534b81b339139452155, type: 3}
---- !u!23 &2978080701841401548 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 478403e522fe3534b81b339139452155,
-    type: 3}
-  m_PrefabInstance: {fileID: 4509740672459307592}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3626726934951249689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 478403e522fe3534b81b339139452155,

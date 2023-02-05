@@ -10,6 +10,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private float baseTileWidth = 1.73f;
     [SerializeField] private int enokiCheckRange = 1;
     [SerializeField] private int fungusCheckRange = 2;
+    [SerializeField] private float checkMargin = 0.5f;
     [SerializeField] private int deadScore = 0;
     [SerializeField] private int fungusScore = 1;
     [SerializeField] private int enokiScore = 3;
@@ -102,7 +103,8 @@ public class TileHolder : MonoBehaviour
             if (tile == null) continue;
             
             // Check if no root or carcass nearby
-            if (tile.CurrentTile.TileType != TileType.Carcass && tile.CurrentTile.TileType != TileType.Root) continue;
+            if (tile.CurrentTile.TileType != TileType.Carcass && 
+                tile.CurrentTile.TileType != TileType.Root) continue;
             
             isDead = false;
 
@@ -117,9 +119,10 @@ public class TileHolder : MonoBehaviour
             currentTile.SetFungusScore(deadScore);
             return;
         }
-        
+
+        Debug.Log(closestRange);
         // Check if within enoki range
-        if (closestRange <= baseTileWidth * enokiCheckRange)
+        if (closestRange <= baseTileWidth * enokiCheckRange + checkMargin)
         {
             // Enoki
             currentTile = Instantiate(enokiPrefab, transform);
@@ -133,3 +136,5 @@ public class TileHolder : MonoBehaviour
         }
     }
 }
+
+

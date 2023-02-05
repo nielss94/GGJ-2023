@@ -175,6 +175,7 @@ MonoBehaviour:
   baseTileWidth: 1.73
   enokiCheckRange: 1
   fungusCheckRange: 2
+  checkMargin: 0.5
   deadScore: 0
   fungusScore: 1
   enokiScore: 3

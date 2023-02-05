@@ -12,13 +12,11 @@ public class MushroomTile : MonoBehaviour
     [SerializeField] private Ease moveEase;
     
     private Mushroom currentMushroom;
-    private Vector3 initialPosition;
     private void Start()
     {
         var worldTile = GetComponent<WorldTile>();
         SetTeam(worldTile.Team);
         currentMushroom.StartSpawning();
-        initialPosition = worldTile.rootTile.transform.position;
         currentMushroom.transform.localScale = Vector3.one * 0.5f;
         currentMushroom.transform.localPosition = Vector3.down * 0.5f;
     }

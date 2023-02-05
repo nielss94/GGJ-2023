@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TileHolder : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class TileHolder : MonoBehaviour
     [SerializeField] private WorldTile fungusTilePrefab;
     [SerializeField] private WorldTile treeTilePrefab;
     [SerializeField] private WorldTile rootTilePrefab;
-    [SerializeField] private WorldTile foodSourceTilePrefab;
+    [SerializeField] private WorldTile carcassTilePrefab;
 
     private WorldTile currentTile;
     private Tile tile;
@@ -72,8 +73,8 @@ public class TileHolder : MonoBehaviour
                 // currentTile.rootTile = tile;
                 currentTile.SetRootTile(tile);
                 break;
-            case TileType.FoodSource:
-                currentTile = Instantiate(foodSourceTilePrefab, transform);
+            case TileType.Carcass:
+                currentTile = Instantiate(carcassTilePrefab, transform);
                 // currentTile.rootTile = tile;
                 currentTile.SetRootTile(tile);
                 break;

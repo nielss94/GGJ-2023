@@ -132,6 +132,13 @@ MonoBehaviour:
   - {fileID: 4547224081786335313, guid: 009d1d5873fe4ce4f834c0fb67a3ac44, type: 3}
   - {fileID: 1051048965633835136, guid: 9fe1daf9be4c2d049bb2c3ee5400f502, type: 3}
   - {fileID: 1721373627704735958, guid: 23718146ed1d9414e9d7cdf49841e596, type: 3}
+  possibleRotations:
+  - 0
+  - 60
+  - 120
+  - 180
+  - 240
+  - 300
 --- !u!1001 &6356505619954463897
 PrefabInstance:
   m_ObjectHideFlags: 0

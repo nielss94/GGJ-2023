@@ -276,6 +276,7 @@ MonoBehaviour:
   spawnCooldown: 3
   spawnRadius: 0.8
   maxSporeSpawn: 4
+  smoothSporePosition: 1
 --- !u!1 &3934465012675300373
 GameObject:
   m_ObjectHideFlags: 0

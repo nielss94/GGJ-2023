@@ -5,9 +5,11 @@ using UnityEngine;
 public class RockTile : MonoBehaviour
 {
     public List<GameObject> rocks;
-    
+    [SerializeField] private float[] possibleRotations;
     private void Start()
     {
-        Instantiate(rocks[Random.Range(0, rocks.Count)], transform);
+        var rock = rocks[Random.Range(0, rocks.Count)];
+        var instantiated = Instantiate(rock, transform);
+        instantiated.transform.localEulerAngles = new Vector3(-90, 0, possibleRotations[Random.Range(0, possibleRotations.Length)]);
     }
 }

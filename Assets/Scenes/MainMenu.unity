@@ -295,6 +295,9 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 3e5f4dac10f805d4ebf4fd249887b14a, type: 2}
   resolutionDropdown: {fileID: 1606295165}
   fullscreenToggle: {fileID: 1834844080}
+  masterVolumeSlider: {fileID: 1670357828}
+  musicVolumeSlider: {fileID: 2060087193}
+  effectsVolumeSlider: {fileID: 531196602}
   defaultMasterVolume: 0.7
   defaultMusicVolume: 0.7
   defaultEffectsVolume: 0.7

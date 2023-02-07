@@ -61,7 +61,7 @@ public class PlayerAudio : MonoBehaviour
     
     private void OnPlaceSpore()
     {
-        AudioManager.Instance.PlaySound(spraySounds[2], transform.position, false, 0.45f);
+        AudioManager.Instance.PlaySound(spraySounds[2], transform.position, false, 0.2f);
     }
 
 
@@ -69,7 +69,7 @@ public class PlayerAudio : MonoBehaviour
     {
         if (change && activeLoopingSpraySound == null)
         {
-            AudioManager.Instance.PlaySound(spraySounds[0], transform.position, false, .45f);
+            AudioManager.Instance.PlaySound(spraySounds[0], transform.position, false, .2f);
             StartCoroutine(PlayLoopingSoundAfterSeconds(spraySounds[0].length));
         }
         else if (activeLoopingSpraySound != null)
@@ -86,7 +86,7 @@ public class PlayerAudio : MonoBehaviour
         {
             Destroy(activeLoopingSpraySound);
         }
-        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.45f);
+        activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.2f);
     }
 
     private void PlayPickUpSporeSound()
@@ -101,17 +101,14 @@ public class PlayerAudio : MonoBehaviour
     {
         if (latestMoveClip != null)
         {
-            // play random sound that was not used before this
             List<AudioClip> unusedSounds = footstepSounds.Where(sound => !sound.Equals(latestMoveClip)).ToList();
             latestMoveClip = unusedSounds[Random.Range(0, unusedSounds.Count)];
-            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .4f);
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .3f);
         }
         else
         {
-            // play random sound
             latestMoveClip = footstepSounds[Random.Range(0, footstepSounds.Count)];
-            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .4f);
+            AudioManager.Instance.PlaySound(latestMoveClip, transform.position, false, .3f);
         }
     }
-    
 }

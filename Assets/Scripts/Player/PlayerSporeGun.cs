@@ -15,11 +15,8 @@ public class PlayerSporeGun : MonoBehaviour
     [SerializeField] private ResourceHolder resourceHolder;
     [SerializeField] private float initialPlaceTimer = 0f;
     [SerializeField] private float maxPlaceTimer = 1;
-    
-    public float MaxPlaceTimer
-    {
-        get { return maxPlaceTimer; }
-    }
+    public float MaxPlaceTimer => maxPlaceTimer;
+
 
     private PlayerInput playerInput;
     private PlayerTeam playerTeam;
@@ -27,13 +24,10 @@ public class PlayerSporeGun : MonoBehaviour
     
     private bool startPlaceTimer = false;
     private float placeTimer = 0;
+    public float PlaceTimer => placeTimer;
 
     private bool gameOver = false;
-    
-    public float PlaceTimer
-    {
-        get { return placeTimer; }
-    }
+
 
     private void Awake()
     {

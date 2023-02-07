@@ -19,6 +19,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider effectsVolumeSlider;
     
+    [Header("Quality dropdown")]
+    [SerializeField] private TMP_Dropdown qualityDropdown;
     
     [Header("Default volumes")]
     [SerializeField] private float defaultMasterVolume = 0.7f;
@@ -51,6 +53,10 @@ public class OptionsMenu : MonoBehaviour
 
         fullscreenToggle.isOn = Screen.fullScreen;
         
+        PlayerPrefs.DeleteKey("QualityLevel");
+        qualityDropdown.value = PlayerPrefs.GetInt("QualityLevel", 0);
+        SetQuality(PlayerPrefs.GetInt("QualityLevel", 0));
+        
         LoadVolumeSettings();
     }
 
@@ -71,6 +77,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetQuality(int qualityIndex)
     {
+        PlayerPrefs.SetInt("QualityLevel", qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
     

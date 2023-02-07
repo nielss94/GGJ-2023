@@ -298,6 +298,7 @@ MonoBehaviour:
   masterVolumeSlider: {fileID: 1670357828}
   musicVolumeSlider: {fileID: 2060087193}
   effectsVolumeSlider: {fileID: 531196602}
+  qualityDropdown: {fileID: 612993037}
   defaultMasterVolume: 0.7
   defaultMusicVolume: 0.7
   defaultEffectsVolume: 0.7

@@ -82,6 +82,10 @@ public class PlayerAudio : MonoBehaviour
     private IEnumerator PlayLoopingSoundAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+        if (activeLoopingSpraySound != null)
+        {
+            Destroy(activeLoopingSpraySound);
+        }
         activeLoopingSpraySound = AudioManager.Instance.PlaySound(spraySounds[1], transform.position, true, 0.45f);
     }
 

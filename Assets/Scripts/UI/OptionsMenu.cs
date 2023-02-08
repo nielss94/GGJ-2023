@@ -53,7 +53,6 @@ public class OptionsMenu : MonoBehaviour
 
         fullscreenToggle.isOn = Screen.fullScreen;
         
-        PlayerPrefs.DeleteKey("QualityLevel");
         qualityDropdown.value = PlayerPrefs.GetInt("QualityLevel", 0);
         SetQuality(PlayerPrefs.GetInt("QualityLevel", 0));
         

@@ -23,10 +23,8 @@ public class PlayerMovement : MonoBehaviour
    
    public bool AllowedToMove = false;
    
-   public Vector2 MoveDirection
-   {
-      get { return moveDirection; }
-   }
+   public Vector2 MoveDirection => moveDirection;
+   
    private bool allowedToMove = false;
    private float modifiedSpeed;
    private bool gameOver = false;

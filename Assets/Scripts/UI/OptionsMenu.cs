@@ -16,6 +16,14 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     [SerializeField] private Toggle fullscreenToggle;
     
+    [Header("Volume sliders")] 
+    [SerializeField] private Slider masterVolumeSlider;
+    [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private Slider effectsVolumeSlider;
+    
+    [Header("Quality dropdown")]
+    [SerializeField] private TMP_Dropdown qualityDropdown;
+    
     [Header("Default volumes")]
     [SerializeField] private float defaultMasterVolume = 0.7f;
     [SerializeField] private float defaultMusicVolume = 0.7f;
@@ -52,12 +60,28 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(new List<string>(Array.ConvertAll(resolutions, resolution => $"{resolution.width} x {resolution.height}")));
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        
+
         fullscreenToggle.isOn = Screen.fullScreen;
         
-        SetMasterVolume(defaultMasterVolume);
-        SetMusicVolume(defaultMusicVolume);
-        SetEffectsVolume(defaultEffectsVolume);
+        qualityDropdown.value = PlayerPrefs.GetInt("QualityLevel", 0);
+        SetQuality(PlayerPrefs.GetInt("QualityLevel", 0));
+        
+        LoadVolumeSettings();
+    }
+
+    private void LoadVolumeSettings()
+    {
+        var masterVolume = PlayerPrefs.GetFloat("MasterVolume", defaultMasterVolume);
+        var musicVolume = PlayerPrefs.GetFloat("MusicVolume", defaultMusicVolume);
+        var effectsVolume = PlayerPrefs.GetFloat("EffectsVolume", defaultEffectsVolume);
+        
+        masterVolumeSlider.value = masterVolume;
+        musicVolumeSlider.value = musicVolume;
+        effectsVolumeSlider.value = effectsVolume;
+
+        SetMasterVolume(masterVolume);
+        SetMusicVolume(musicVolume);
+        SetEffectsVolume(effectsVolume);
     }
     
     public void OnNavigate(InputAction.CallbackContext obj)
@@ -72,27 +96,32 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetQuality(int qualityIndex)
     {
+        PlayerPrefs.SetInt("QualityLevel", qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
     
     public void SetMasterVolume(float volume)
     {
+        PlayerPrefs.SetFloat("MasterVolume", volume);
         mixer.SetFloat("MasterVolume", LinearToDecibel(volume));
     }
     
     public void SetMusicVolume(float volume)
     {
+        PlayerPrefs.SetFloat("MusicVolume", volume);
         mixer.SetFloat("MusicVolume", LinearToDecibel(volume));
     }
     
     public void SetEffectsVolume(float volume)
     {
+        PlayerPrefs.SetFloat("EffectsVolume", volume);
         mixer.SetFloat("EffectsVolume", LinearToDecibel(volume));
     }
     
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("Fullscreen", isFullscreen ? 1 : 0);
     }
     
     public void SetResolution(int resolutionIndex)

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -20,6 +22,14 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private float defaultEffectsVolume = 0.7f;
     
     private Resolution[] resolutions;
+
+    private PlayerInput playerInput;
+
+    private void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.actions["Navigate"].performed += OnNavigate;
+    }
 
     private void Start()
     {
@@ -49,6 +59,16 @@ public class OptionsMenu : MonoBehaviour
         SetMusicVolume(defaultMusicVolume);
         SetEffectsVolume(defaultEffectsVolume);
     }
+    
+    public void OnNavigate(InputAction.CallbackContext obj)
+    {
+        var value = obj.ReadValue<Vector2>();
+        if (value != Vector2.zero && EventSystem.current.currentSelectedGameObject == null && optionsMenu.activeSelf)
+        {
+            EventSystem.current.SetSelectedGameObject(resolutionDropdown.gameObject);
+        }
+    }
+
 
     public void SetQuality(int qualityIndex)
     {

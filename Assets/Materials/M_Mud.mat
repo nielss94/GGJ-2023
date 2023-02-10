@@ -198,9 +198,9 @@ Material:
     - _EnergyConservingSpecularColor: 1
     - _Floating_Foam_Strength: 0
     - _Foam_Bands: 1
-    - _Foam_Fall_Off: 8.73
-    - _Foam_Removal: 0.37
-    - _Foam_Width: 0.41
+    - _Foam_Fall_Off: 12
+    - _Foam_Removal: 0.75
+    - _Foam_Width: 0.1
     - _Fresnel_Strength: 1.5
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -234,7 +234,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Smoothness: 1
+    - _Smoothness: 0.75
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
@@ -271,7 +271,7 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _Water_Depth_Strength: 0.05
-    - _Wave_Speed: 0.03
+    - _Wave_Speed: 0.01
     - _Wave_Strength: 3
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4

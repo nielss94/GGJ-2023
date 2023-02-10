@@ -80,7 +80,7 @@ MonoBehaviour:
   fadeInSpeed: 2
   scaleEase: 1
   moveEase: 1
-  shakeStrength: 0.1
+  shakeStrength: 1
 --- !u!1001 &4509740672459307592
 PrefabInstance:
   m_ObjectHideFlags: 0

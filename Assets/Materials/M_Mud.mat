@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water_mat
+  m_Name: M_Mud
   m_Shader: {fileID: -6465566751694194690, guid: 6f493a366a939ee4ead8338eeac76ae1,
     type: 3}
   m_ValidKeywords:
@@ -196,12 +196,12 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _Floating_Foam_Strength: 0.156
-    - _Foam_Bands: 15
-    - _Foam_Fall_Off: 2.51
-    - _Foam_Removal: 1.99
-    - _Foam_Width: 0.46
-    - _Fresnel_Strength: 1
+    - _Floating_Foam_Strength: 0
+    - _Foam_Bands: 1
+    - _Foam_Fall_Off: 8.73
+    - _Foam_Removal: 0.37
+    - _Foam_Width: 0.41
+    - _Fresnel_Strength: 1.5
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -271,8 +271,8 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _Water_Depth_Strength: 1
-    - _Wave_Speed: 0.05
-    - _Wave_Strength: 0.4
+    - _Wave_Speed: 0.03
+    - _Wave_Strength: 3
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
@@ -286,10 +286,10 @@ Material:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel_Color: {r: 0, g: 0.5471698, b: 0.5471698, a: 1}
+    - _Fresnel_Color: {r: 0.4156863, g: 0.3137255, b: 0.23137257, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Main_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Main_Color: {r: 0.028301895, g: 0.0268334, b: 0.0268334, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -297,5 +297,5 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _Wave_Size_1: {r: 50, g: 50, b: 0, a: 0}
-    - _Wave_Size_2: {r: 20, g: 20, b: 0, a: 0}
+    - _Wave_Size_2: {r: 35, g: 35, b: 0, a: 0}
   m_BuildTextureStacks: []

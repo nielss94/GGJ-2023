@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2242110722703214877}
   - component: {fileID: 9092377166287853183}
   m_Layer: 0
-  m_Name: MushroomT1
+  m_Name: Tile_Mushroom_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

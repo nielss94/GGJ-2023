@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3879884278382242884}
   m_Layer: 0
-  m_Name: Blocker2
+  m_Name: Tile_Trees_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

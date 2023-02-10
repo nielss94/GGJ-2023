@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 6705288037423388791}
   - component: {fileID: 4683820137009404043}
   m_Layer: 0
-  m_Name: Rootshrooms1
+  m_Name: Tile_Rootshrooms_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

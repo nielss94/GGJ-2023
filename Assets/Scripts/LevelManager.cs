@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [System.Serializable]
+    public struct LevelRef
+    {
+        public string Name;
+        public string SceneName;
+    }
+    
     public static LevelManager Instance;
-    public string[] Levels => levels;
+    public LevelRef[] Levels => levels;
 
-    [SerializeField] private String[] levels;
+    [SerializeField] private LevelRef[] levels;
     
     private int currentLevelIndex = 0;
     private string currentLoadedLevelName;
@@ -40,12 +47,19 @@ public class LevelManager : MonoBehaviour
         
         if (level.Length > 0)
         {
-            currentLevelIndex = Array.IndexOf(levels, level);
+            for (var i = 0; i < levels.Length; i++)
+            {
+                if (levels[i].SceneName == level)
+                {
+                    currentLevelIndex = i;
+                    break;
+                }
+            }
         }
         
         if (currentLevelIndex < levels.Length)
         {
-            StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex]));
+            StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex].SceneName));
             currentLevelIndex++;
         }
         else

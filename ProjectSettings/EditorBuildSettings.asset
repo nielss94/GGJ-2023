@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Sce_MainMenu.unity
     guid: c0e91a2763b8cea408b03c4c04665749
   - enabled: 1
-    path: Assets/Scenes/BaseScene.unity
+    path: Assets/Scenes/Sce_BaseScene.unity
     guid: ba32f6b13eb23c14ebe7e4c0435eb231
   - enabled: 1
     path: Assets/Scenes/Sce_Level_Small.unity

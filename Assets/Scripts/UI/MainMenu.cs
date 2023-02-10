@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator LoadBaseLevelRoutine()
     {
-        var progress = SceneManager.LoadSceneAsync("BaseScene", LoadSceneMode.Additive);
+        var progress = SceneManager.LoadSceneAsync("Sce_BaseScene", LoadSceneMode.Additive);
 
         while (!progress.isDone)
         {

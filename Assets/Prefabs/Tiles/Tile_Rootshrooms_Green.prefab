@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 6705288037423388791}
   - component: {fileID: 4683820137009404043}
   m_Layer: 0
-  m_Name: Rootshrooms1
+  m_Name: Tile_Rootshrooms_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,7 +1790,7 @@ CapsuleCollider:
   m_Radius: 0.15
   m_Height: 1.22
   m_Direction: 0
-  m_Center: {x: 0, y: 0.2, z: 0.03}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7285556967390079582
 GameObject:
   m_ObjectHideFlags: 0

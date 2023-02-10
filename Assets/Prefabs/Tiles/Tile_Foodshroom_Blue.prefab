@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 5086890545465948096}
   - component: {fileID: 4918817881481726976}
   m_Layer: 0
-  m_Name: Foodshroom2
+  m_Name: Tile_Foodshroom_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   sporePrefab: {fileID: 4574826828581308034, guid: a35145ae646abd1408fbbd0a2dacd827,
     type: 3}
   spawnCooldown: 4
-  spawnRadius: 0.85
+  spawnRadius: 0.75
   maxSporeSpawn: 3
   smoothSporePosition: 1
 --- !u!136 &4918817881481726976

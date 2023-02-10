@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
+    public string[] Levels => levels;
 
     [SerializeField] private String[] levels;
     
@@ -23,22 +23,28 @@ public class LevelManager : MonoBehaviour
         }
         Instance = this;
         
-        LoadNextLevel();
+        // LoadNextLevel();
         
-        gameManager = GameManager.Instance;
-        if (gameManager != null) gameManager.OnGameOver += OnGameOver;
+        // gameManager = GameManager.Instance;
+        // if (gameManager != null) gameManager.OnGameOver += OnGameOver;
     }
 
-    public void LoadNextLevel()
+    public void LoadNextLevel(string level = "")
     {
         if (levels.Length == 0) return;
 
+        if (currentLoadedLevelName != null && currentLoadedLevelName.Length > 0)
+        {
+            StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
+        }
+        
+        if (level.Length > 0)
+        {
+            currentLevelIndex = Array.IndexOf(levels, level);
+        }
+        
         if (currentLevelIndex < levels.Length)
         {
-            if (currentLoadedLevelName != null && currentLoadedLevelName.Length > 0)
-            {
-                StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
-            }
             StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex]));
             currentLevelIndex++;
         }
@@ -47,6 +53,10 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = 0;
             LoadNextLevel();
         }
+    }
+
+    public void UnloadLevel(string levelName) {
+        StartCoroutine(UnloadLevelRoutine(levelName));
     }
 
     public IEnumerator LoadLevelRoutine(string nextLevelName)
@@ -63,7 +73,7 @@ public class LevelManager : MonoBehaviour
         if (gameManager == null) gameManager = GameManager.Instance;
     }
     
-    public IEnumerator UnloadLevelRoutine(string levelName)
+    private IEnumerator UnloadLevelRoutine(string levelName)
     {
         var progress = SceneManager.UnloadSceneAsync(levelName);
 

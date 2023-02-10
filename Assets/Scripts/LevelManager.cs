@@ -1,14 +1,21 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [System.Serializable]
+    public struct LevelRef
+    {
+        public string Name;
+        public string SceneName;
+    }
+    
     public static LevelManager Instance;
+    public LevelRef[] Levels => levels;
 
-    [SerializeField] private String[] levels;
+    [SerializeField] private LevelRef[] levels;
     
     private int currentLevelIndex = 0;
     private string currentLoadedLevelName;
@@ -23,23 +30,36 @@ public class LevelManager : MonoBehaviour
         }
         Instance = this;
         
-        LoadNextLevel();
+        // LoadNextLevel();
         
-        gameManager = GameManager.Instance;
-        if (gameManager != null) gameManager.OnGameOver += OnGameOver;
+        // gameManager = GameManager.Instance;
+        // if (gameManager != null) gameManager.OnGameOver += OnGameOver;
     }
 
-    public void LoadNextLevel()
+    public void LoadNextLevel(string level = "")
     {
         if (levels.Length == 0) return;
 
+        if (currentLoadedLevelName != null && currentLoadedLevelName.Length > 0)
+        {
+            StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
+        }
+        
+        if (level.Length > 0)
+        {
+            for (var i = 0; i < levels.Length; i++)
+            {
+                if (levels[i].SceneName == level)
+                {
+                    currentLevelIndex = i;
+                    break;
+                }
+            }
+        }
+        
         if (currentLevelIndex < levels.Length)
         {
-            if (currentLoadedLevelName != null && currentLoadedLevelName.Length > 0)
-            {
-                StartCoroutine(UnloadLevelRoutine(currentLoadedLevelName));
-            }
-            StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex]));
+            StartCoroutine(LoadLevelRoutine(levels[currentLevelIndex].SceneName));
             currentLevelIndex++;
         }
         else
@@ -47,6 +67,10 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = 0;
             LoadNextLevel();
         }
+    }
+
+    public void UnloadLevel(string levelName) {
+        StartCoroutine(UnloadLevelRoutine(levelName));
     }
 
     public IEnumerator LoadLevelRoutine(string nextLevelName)
@@ -63,7 +87,7 @@ public class LevelManager : MonoBehaviour
         if (gameManager == null) gameManager = GameManager.Instance;
     }
     
-    public IEnumerator UnloadLevelRoutine(string levelName)
+    private IEnumerator UnloadLevelRoutine(string levelName)
     {
         var progress = SceneManager.UnloadSceneAsync(levelName);
 

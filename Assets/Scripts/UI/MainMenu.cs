@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject mainMenu, optionsMenu;
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject playButton;
     
     private PlayerInput playerInput;
@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
+        StartCoroutine(LoadBaseLevelRoutine());
     }
 
     private void Start()
@@ -31,12 +32,6 @@ public class MainMenu : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(playButton);
         }
     }
-
-    public void OnGameStart()
-    {
-        StartCoroutine(LoadLevelRoutine());
-    }
-    
     public void OnGameExit()
     {
         Application.Quit();
@@ -45,14 +40,12 @@ public class MainMenu : MonoBehaviour
         #endif
     }
 
-    private IEnumerator LoadLevelRoutine()
+    private IEnumerator LoadBaseLevelRoutine()
     {
-        // TODO: load management scene
-        var progress = SceneManager.LoadSceneAsync("BaseScene", LoadSceneMode.Single);
+        var progress = SceneManager.LoadSceneAsync("Sce_BaseScene", LoadSceneMode.Additive);
 
         while (!progress.isDone)
         {
-            // TODO: show loading indicator
             yield return null;
         }
     }

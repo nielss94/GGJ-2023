@@ -270,7 +270,7 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _Water_Depth_Strength: 1
+    - _Water_Depth_Strength: 0.05
     - _Wave_Speed: 0.03
     - _Wave_Strength: 3
     - _ZTestDepthEqualForOpaque: 4

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,11 +154,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - Name: Small
-    SceneName: Sce_Level_Small
+    SceneName: Sce_Level_01_14x14
   - Name: Medium
-    SceneName: Sce_Level_Medium
+    SceneName: Sce_Level_02_20x20
   - Name: Large
-    SceneName: Sce_Level_Large
+    SceneName: Sce_Level_03_28x28
+  - Name: Large Run
+    SceneName: Sce_Level_04_100x12
 --- !u!4 &622843774
 Transform:
   m_ObjectHideFlags: 0

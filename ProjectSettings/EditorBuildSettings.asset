@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/SplashPiel/Intro.unity
     guid: bf5a2c45023aeeb4f826c1c1b29b9947
   - enabled: 1
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sce_Level_03_28x28.unity
     guid: ffbc39dca2dfcfd47b9cd3eb13dbcf26
+  - enabled: 1
+    path: Assets/Scenes/Sce_Level_04_100x12.unity
+    guid: b2611f09b39dd1d4a808e47592557b8d
   m_configObjects: {}

@@ -296,6 +296,6 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _Wave_Size_1: {r: 50, g: 50, b: 0, a: 0}
-    - _Wave_Size_2: {r: 35, g: 35, b: 0, a: 0}
+    - _Wave_Size_1: {r: 30, g: 30, b: 0, a: 0}
+    - _Wave_Size_2: {r: 15, g: 15, b: 0, a: 0}
   m_BuildTextureStacks: []

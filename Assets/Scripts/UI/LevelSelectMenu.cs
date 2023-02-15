@@ -18,6 +18,8 @@ public class LevelSelectMenu : MonoBehaviour {
     }
 
     private void PopulateLevelButtons(LevelManager.LevelRef[] levels) {
+		GameObject firstSelect = null;
+		
         for (var i = 0; i < levels.Length; i++) {
             var newButton = Instantiate(levelSelectButtonPrefab, levelButtonContainer.transform);
             var levelName = levels[i];
@@ -25,9 +27,13 @@ public class LevelSelectMenu : MonoBehaviour {
             newButton.GetComponentInChildren<Button>().onClick.AddListener(() => OnLevelSelected(levelName.SceneName));
             
             if (i == 0) {
-                EventSystem.current.SetSelectedGameObject(newButton);                                   
+				firstSelect = newButton;
             }
         }
+		
+		if (firstSelect != null) {
+			EventSystem.current.SetSelectedGameObject(firstSelect.GetComponentInChildren<Button>().gameObject);
+		}
     }
 
     private void OnLevelSelected(string level) {
